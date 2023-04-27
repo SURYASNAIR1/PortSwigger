@@ -133,4 +133,11 @@ Add the above in the url as to solve the problem.
 
 ![image](https://user-images.githubusercontent.com/123303806/234789307-fc4ce8e8-ec92-4006-b685-35d8cba16cde.png)
 
+**Lab #4 SQL injection UNION attack, finding a column containing text**
+
+This lab contains a SQL injection vulnerability in the product category filter. The results from the query are returned in the application's response, so we can use a UNION attack to retrieve data from other tables. To construct such an attack, we first need to determine the number of columns returned by the query. 
+
+![image](https://user-images.githubusercontent.com/123303806/234791042-2d47ae80-5b5b-4a66-8d2f-7a8fe27e93f3.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234791958-f1519ee2-411d-4bcf-94be-b6cdd7e084ea.png)
 
