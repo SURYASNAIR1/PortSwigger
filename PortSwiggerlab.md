@@ -127,14 +127,6 @@ Rule :
 
 This shows that thee isn't only one column in the query.
 
-Here we use burp suite .Brup suite is  a proxy that sits in the middle between my browser and the application.
-
-![image](https://user-images.githubusercontent.com/123303806/234781297-212c58de-7421-447b-afb1-13e58908cf4b.png)
-
-In this way any requests that I make in tthe browser will get intercepted through first and then get sentto the application similarly any responses that come back from the application go through burpsuite first and then to my browser.
-
-![image](https://user-images.githubusercontent.com/123303806/234784924-b0b0ae64-50ca-4794-adf2-58c4e636c4d5.png)
-
 https://0ac100c404344948849e7ce60068005c.web-security-academy.net/filter?category=Clothing%2c+shoes+and+accessories%27+UNION+SELECT+NULL,+NULL,NULL--
 
 Add the above in the url as to solve the problem.
