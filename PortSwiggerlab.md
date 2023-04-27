@@ -27,12 +27,10 @@ Select all the columns from the table of products where category =Accessories  A
 
 To find hidden data , Set released to zero and to one so as to see the whole product.
 
-![image](https://user-images.githubusercontent.com/123303806/234769687-4ea32ab1-1c1a-4063-923b-3f5db6f01155.png)
+![image](https://user-images.githubusercontent.com/123303806/234771554-cad7c658-513a-4990-8b87-ae05ac0c91d2.png)
 
 Below the category is closed with no string inside.
  
-![image](https://user-images.githubusercontent.com/123303806/234771554-cad7c658-513a-4990-8b87-ae05ac0c91d2.png)
-
 ![image](https://user-images.githubusercontent.com/123303806/234771502-d21a78ad-1d1c-4cec-9df2-eed47106fe85.png)
 
 ![image](https://user-images.githubusercontent.com/123303806/234771253-13f8d8bc-3ecc-48c8-9730-c4659265bc73.png)
