@@ -86,4 +86,54 @@ SELECT firstname FROM user where username='adminstrator'--'  and password='admin
 
 ![image](https://user-images.githubusercontent.com/123303806/234773767-ca717dcc-c296-4496-819d-d2b11f7f6172.png)
 
+**Lab #3 SQLi UNION attack determining the number of columns returned by the query*
+
+Extract information from the backend database.
+
+SQLi-Product category filter
+
+The way we wanna exploit this filter or this category parameter is by running a SQL injection union attack.sql injection union attack to extract information from the backend database. Determine the number of columns that are being returned by the query that filters on category and once we are done stop that.
+
+Union attack returns an additional row containing null values.
+
+End Goal: Determine the number of columns returned by the query.
+
+Background Knowledge : How Union operator works.
+
+![image](https://user-images.githubusercontent.com/123303806/234774260-642c992a-b1dd-4d35-8c61-ed841aa68950.png)
+
+Suppose for example there contains two tables  table1 and table2.
+
+Table1 has two columns a b and table2 has two columns c d and it contains values as listed in figure.
+
+Here the UNION operator is concatenates the results of the two queries into a single result set.
+
+![WhatsApp Image 2023-04-27 at 11 52 25](https://user-images.githubusercontent.com/123303806/234776901-d9516c85-4f69-452a-ad31-5fc375014a35.jpg)
+
+Give me not only products in product table but also give me usernames and passwords from the users table.That allow me to extarct information from other tables that are used by the backend database.
+
+Rule :
+
+*The number and the order of the columns must be same in all queries.
+*The data types must be compatible.
+
+![image](https://user-images.githubusercontent.com/123303806/234779054-bb3d792b-d590-492e-ab38-60963aee66e8.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234779128-891824a7-6603-43ce-922c-58dcc6619cab.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234779349-529c0bb9-d05e-4b2c-8e67-700d1b9c7bfe.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234779403-003da14c-ba51-444c-a4f7-355d0fc3978b.png)
+
+This shows that thee isn't only one column in the query.
+
+Here we use burp suite .Brup suite is  a proxy that sits in the middle between my browser and the application.
+
+![image](https://user-images.githubusercontent.com/123303806/234781297-212c58de-7421-447b-afb1-13e58908cf4b.png)
+
+In this way any requests that I make in tthe browser will get intercepted through first and then get sentto the application similarly any responses that come back from the application go through burpsuite first and then to my browser.
+
+![image](https://user-images.githubusercontent.com/123303806/234784924-b0b0ae64-50ca-4794-adf2-58c4e636c4d5.png)
+
+
 
