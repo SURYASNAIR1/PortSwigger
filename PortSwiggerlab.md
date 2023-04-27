@@ -31,11 +31,11 @@ To find hidden data , Set released to zero and to one so as to see the whole pro
 
 Below the category is closed with no string inside.
  
-![image](https://user-images.githubusercontent.com/123303806/234769806-762651e3-6b9c-49f4-b76e-5a1fc08d8e0c.png)
+![image](https://user-images.githubusercontent.com/123303806/234771554-cad7c658-513a-4990-8b87-ae05ac0c91d2.png)
 
-![image](https://user-images.githubusercontent.com/123303806/234769942-29988eb8-f279-4fde-979f-2e162720505c.png)
+![image](https://user-images.githubusercontent.com/123303806/234771502-d21a78ad-1d1c-4cec-9df2-eed47106fe85.png)
 
-![image](https://user-images.githubusercontent.com/123303806/234770344-fc7dc1b1-74b1-4aa2-a2b0-86d4012335e0.png)
+![image](https://user-images.githubusercontent.com/123303806/234771253-13f8d8bc-3ecc-48c8-9730-c4659265bc73.png)
 
 The above will result in internal server error.
 
