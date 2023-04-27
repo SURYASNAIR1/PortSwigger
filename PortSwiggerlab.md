@@ -141,3 +141,35 @@ This lab contains a SQL injection vulnerability in the product category filter. 
 
 ![image](https://user-images.githubusercontent.com/123303806/234791958-f1519ee2-411d-4bcf-94be-b6cdd7e084ea.png)
 
+**Lab #5: SQL injection UNION attack, retrieving data from other tables**
+
+![image](https://user-images.githubusercontent.com/123303806/234793237-ced2d6c1-b6ca-46c3-89e3-22a242627e55.png)
+
+Everything from the table products where the category is set to accessories and released is set to 1.So if accessories followed by ' lead to internal server error.
+
+![image](https://user-images.githubusercontent.com/123303806/234793355-1e47c500-a197-49ce-b8f3-9569d7b85b3d.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793395-cf5cd486-dc63-42fe-bbe8-6eb99519ffc8.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793469-6c374875-3599-408c-ae5d-08a91810bdbd.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793488-f4c84dbc-d340-406b-8081-9163339ce0fa.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793529-04e80bbd-4adb-4251-acff-61ba86d535e5.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793576-b8379b05-83bb-4f9a-8346-f1b8164ba49a.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793618-ded3b639-7c1c-4fdc-9b34-0536fe54bab0.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793660-ffc6174d-53b6-42d3-aa2d-8b24dfe960d3.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234793688-7e2a9b4d-60cf-4dfb-9798-9c68a0da17f2.png)
+
+
+
+
+
+
+
+
+
