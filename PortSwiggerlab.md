@@ -47,5 +47,43 @@ Always evaluates to true.-- indicates everything indicates after this is a comme
 
 ![image](https://user-images.githubusercontent.com/123303806/234770911-e6547b7a-8884-4423-b6e6-505f8c293cc5.png)
 
+**Lab #2 SQL injection vulnerability allowing login bypass**
+
+Goal: Perform SQL attack and login as the administrator user.
+
+SELECT firstname FROM user where username='admin' and password='admin'
+
+![image](https://user-images.githubusercontent.com/123303806/234772974-4a526d65-4490-4ce4-bcf1-c6abdb8b581d.png)
+
+User name is admin and password is admin.
+
+![image](https://user-images.githubusercontent.com/123303806/234773131-77ebd11c-3cbe-47c9-9988-411d3ecda3ca.png)
+
+The above is a non verbal generic error.User name is  invalid means the attacker would be able to enumerate usernames on the system and that's a vulnerability on its own.
+
+![image](https://user-images.githubusercontent.com/123303806/234773260-372fada9-0b31-4234-ba75-6f09b809c4c3.png)
+
+SELECT firstname FROM user where username=''' and password='admin'
+
+If I try to add sql character as username and type any password and try to login it will show internal server error.Which means something happened at the back end that broke the application.Thus its a good indication that this is vulnerable to sql injection.The reason behind this is because this quote character interferedwith the query.
+
+![image](https://user-images.githubusercontent.com/123303806/234773400-150e5652-7f98-4e38-85e8-73139d1b5b78.png)
+
+
+SELECT firstname FROM user where username='admin'--' and password='admin'
+ 
+![image](https://user-images.githubusercontent.com/123303806/234773480-a955a0ad-fd67-40bd-bdda-80c8e6970e46.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234773528-acd5960c-5957-4f89-9ff9-4a8d03e53143.png)
+
+Because the user is not the admin here.
+
+SELECT firstname FROM user where username='adminstrator'--'  and password='admin'
+
+![image](https://user-images.githubusercontent.com/123303806/234773642-7a4a86f8-8f7b-407b-bebb-e236b4daa24b.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234773699-3abd6512-c642-4388-9cf9-13eead7b1a47.png)
+
+![image](https://user-images.githubusercontent.com/123303806/234773767-ca717dcc-c296-4496-819d-d2b11f7f6172.png)
 
 
