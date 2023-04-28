@@ -305,20 +305,16 @@ We do see all the tables there's a myriad of tables.
 
 Now we can specify which table .where the table name equals the table name .
 
-![image](https://user-images.githubusercontent.com/123303806/235178358-4373713a-32e5-495c-873d-6057cdec802d.png)
+![image](https://user-images.githubusercontent.com/123303806/235203995-d35c0f16-b015-4ef0-bc6a-ae27b2773779.png)
 
+![image](https://user-images.githubusercontent.com/123303806/235204092-e3754cf5-4682-402a-8c02-07cf580a6a44.png)
 
-![image](https://user-images.githubusercontent.com/123303806/235181297-d413ba63-4f9f-43af-a76d-4eb73a74e368.png)
+![image](https://user-images.githubusercontent.com/123303806/235204140-565ab217-90e1-47f3-8b04-60ceb4365907.png)
 
-![image](https://user-images.githubusercontent.com/123303806/235181482-18381feb-1dee-476f-8765-70cdd81cfc96.png)
+![image](https://user-images.githubusercontent.com/123303806/235204748-0e44e598-f30d-4176-b900-590f5f34ea9f.png)
 
-![image](https://user-images.githubusercontent.com/123303806/235181801-f74796ad-2cdd-482d-bc81-0f1e395d1a2b.png)
+![image](https://user-images.githubusercontent.com/123303806/235204899-065a26ab-7980-4013-ae16-14ebd901e85a.png)
 
-![image](https://user-images.githubusercontent.com/123303806/235181971-ec27e4c4-0f77-432c-94c7-14f518c6958f.png)
+![image](https://user-images.githubusercontent.com/123303806/235205159-c752b9ab-8e60-4385-889f-b9336d64dde1.png)
 
-![image](https://user-images.githubusercontent.com/123303806/235183591-390b7aea-8882-41cf-b46e-ac24ac5c2f6f.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235183779-e539d7c4-d62c-44f4-bbe2-f7539aa38d69.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235183868-1361523d-3195-47e6-b029-95322d99d049.png)
-
+So we discovered a sql live vulnerability.We were using information schema tables which exists at all time .We can always use that to look at all the existing tables .We found an interesting one with our users table and now we did the exact same querying asking for the columnsin that table and we got our username and our password column name and now that we had the correct table name and correct column nameswe could just query with the unionselect queryfor the values we wantedand those werethe credentials of the administrator and we use this credential as we logged in and we solved the challenge.
