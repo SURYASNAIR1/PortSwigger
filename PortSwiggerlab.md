@@ -308,4 +308,17 @@ Now we can specify which table .where the table name equals the table name .
 ![image](https://user-images.githubusercontent.com/123303806/235178358-4373713a-32e5-495c-873d-6057cdec802d.png)
 
 
+![image](https://user-images.githubusercontent.com/123303806/235181297-d413ba63-4f9f-43af-a76d-4eb73a74e368.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235181482-18381feb-1dee-476f-8765-70cdd81cfc96.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235181801-f74796ad-2cdd-482d-bc81-0f1e395d1a2b.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235181971-ec27e4c4-0f77-432c-94c7-14f518c6958f.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235183591-390b7aea-8882-41cf-b46e-ac24ac5c2f6f.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235183779-e539d7c4-d62c-44f4-bbe2-f7539aa38d69.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235183868-1361523d-3195-47e6-b029-95322d99d049.png)
 
