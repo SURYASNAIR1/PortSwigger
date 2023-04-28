@@ -364,3 +364,11 @@ Output the column names of the users table :
 ![image](https://user-images.githubusercontent.com/123303806/235215110-3a1a0c7e-ab43-4cb5-aacf-bf91678293d0.png)
 
 Output the list of usernames/passwords
+
+![image](https://user-images.githubusercontent.com/123303806/235216134-f8fecee2-ef5a-4826-a209-8429e60aa724.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235216237-a310815b-fa79-4dc4-baeb-ee1d937f2781.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235216383-aef6cb28-38bd-4283-a1cb-5bd856a4478d.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235216913-6100889c-b829-4016-91fa-f5d34998cd0c.png)
