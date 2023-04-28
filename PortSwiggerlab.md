@@ -278,3 +278,33 @@ iii.Output the version
 Thus it shows the version.
 
 ![image](https://user-images.githubusercontent.com/123303806/235169896-954720be-55cb-4add-a2e6-fc160b866f28.png)
+
+**Lab #9: SQL injection attack, listing the database contents on non-Oracle databases**
+
+Extract some information out of the database without brute forcing.
+
+![image](https://user-images.githubusercontent.com/123303806/235173353-d5cfade6-77bc-49cd-a775-2143dd88733f.png)
+
+To findout how many columns are returned by that initial query and we're getting an error that means one column is not enough .
+
+![image](https://user-images.githubusercontent.com/123303806/235173780-fdfc8307-7dc5-4028-bc2f-ae73924b576c.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235173899-fb8ee958-c08d-47f9-8dc4-aabc77777e2e.png)
+
+This results in successful answer that means this was correct so it's two columns that are returned by the initial query.
+
+Now we're going to query table name and table name is a column that exists at all times in information schema table.
+
+![image](https://user-images.githubusercontent.com/123303806/235174971-0fe4b9be-353c-4153-b39f-057c4005a421.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235175118-e1e9eb8f-6ca9-4149-9c2f-336a29a6bf0b.png)
+
+We do see all the tables there's a myriad of tables.
+
+![image](https://user-images.githubusercontent.com/123303806/235175660-888333ac-e88f-4808-a6a6-9e3ddc3aa8ce.png)
+
+Now we can specify which table .where the table name equals the table name .
+
+![image](https://user-images.githubusercontent.com/123303806/235176314-28f3f774-f99b-428f-8ff4-dc3b9c3ecf33.png)
+
+
