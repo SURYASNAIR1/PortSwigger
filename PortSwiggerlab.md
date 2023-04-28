@@ -161,12 +161,13 @@ Everything from the table products where the category is set to accessories and 
 
 ![image](https://user-images.githubusercontent.com/123303806/234793618-ded3b639-7c1c-4fdc-9b34-0536fe54bab0.png)
 
-![image](https://user-images.githubusercontent.com/123303806/234793660-ffc6174d-53b6-42d3-aa2d-8b24dfe960d3.png)
+![image](https://user-images.githubusercontent.com/123303806/235070548-55d1fd42-ddb0-4847-a6b5-fc7d2124d02c.png)
 
-![image](https://user-images.githubusercontent.com/123303806/234793688-7e2a9b4d-60cf-4dfb-9798-9c68a0da17f2.png)
+![image](https://user-images.githubusercontent.com/123303806/235071054-f2d3d213-4cde-4e1d-a494-afbf469e94fb.png)
 
+![image](https://user-images.githubusercontent.com/123303806/235071149-7889cc61-1a22-46b9-8a56-11bf962eecb4.png)
 
-
+Firstly we saw a sql query that was used to return data in our case it was product data.we used single quote first thus its showing error that's a good indicator that it is vulnerable to sql injection.Then we used a union select query to query for null stringswhich basically represent every single possible character type that is used by a table and we started with one null string that didn't work so we realized that the original sql query is returning more than just one column we added another one we said null  null and we realized now it is working .So we had the correct numbers of columns that are returned by the original sql query and this is important otherwise the union attack payload is not going to workout.And then we substituted our null payloads with a number and a string just to realize what character the original column has if it's an integer ,if it's a string or something else.Now we knew that we went ahead and we were asking for username and password out of a different table called users because in this lab we knew that it actually existed in a real life application you would have to do some guesswork in order to find out if that table exists or not.Then we got the information out of the database and this is the way how we can extract interesting data from a sql database.
 
 
 
