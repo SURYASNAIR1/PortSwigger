@@ -175,4 +175,52 @@ We will be using a union-based sql injection attack in order to retrieve multipl
 
 Goal:Retrieve all usernames and password and login as the administrator  user.
 
+![image](https://user-images.githubusercontent.com/123303806/235075863-29060c1f-7e14-4a50-9d40-db29621ee896.png)
 
+![image](https://user-images.githubusercontent.com/123303806/235075937-4dda4147-7661-48a2-9d2e-775a81e090ba.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235076253-7292c3a2-455f-4c67-80e6-338cc6f0571d.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235076333-34469a82-003a-4f34-8715-8168ef5930b3.png)
+ 
+Show no error which means that this column exists.
+
+![image](https://user-images.githubusercontent.com/123303806/235076665-0a7316f4-17a2-4e7b-bfaf-d5186874e7d0.png)
+
+Trying by column number 2 and it definitely exists.
+
+![image](https://user-images.githubusercontent.com/123303806/235076929-2003ad62-596a-471d-af3b-f33dcba7b0c1.png)
+
+Column number 3 results in internal server error.Column 3 doesn't exists.
+
+![image](https://user-images.githubusercontent.com/123303806/235077560-91252b92-56a0-466b-b877-827be8af8819.png)
+
+Internal server error means that the column does not accept data type text.
+
+![image](https://user-images.githubusercontent.com/123303806/235078031-6a26da67-e813-4868-9195-4248fc4badd0.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235078101-5d51374c-6f33-4213-a411-bc8f4883b451.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235078384-a1d14c32-fc41-42c3-821d-9baf5b40dae1.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235078477-fb112db4-70d8-4ecd-97fb-7a5f82491835.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235078635-2fc7cc13-5d26-42b5-a7f4-ac8a3b6a5fb9.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235078704-291a7fdc-ba1c-4df1-b5d7-4c2ed90b5d46.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235079001-5b81f8a6-fa2c-472e-b78e-4fb411cfbc76.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235079063-dba3ec08-0314-40c7-b9d4-0502e424b8dd.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235079286-6eb8065d-7c70-48a9-98a2-b8e741369a8c.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235080360-010a07ed-4c70-404c-bbe9-8a0fba34b81c.png)
+
+This will show the username and password.But I dont know where the username ends and wherevthe password begins.
+
+![image](https://user-images.githubusercontent.com/123303806/235080889-d2a98c6c-48ef-4cb9-999b-1d29ce48fd82.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235081794-f608952e-55e6-4ac8-8709-c325d5f95869.png)
+
+Enter the username upto the star and enter the password after the star.Then we tried to login its showing successful.
