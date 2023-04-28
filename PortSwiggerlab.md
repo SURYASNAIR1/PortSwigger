@@ -169,8 +169,10 @@ Everything from the table products where the category is set to accessories and 
 
 Firstly we saw a sql query that was used to return data in our case it was product data.we used single quote first thus its showing error that's a good indicator that it is vulnerable to sql injection.Then we used a union select query to query for null stringswhich basically represent every single possible character type that is used by a table and we started with one null string that didn't work so we realized that the original sql query is returning more than just one column we added another one we said null  null and we realized now it is working .So we had the correct numbers of columns that are returned by the original sql query and this is important otherwise the union attack payload is not going to workout.And then we substituted our null payloads with a number and a string just to realize what character the original column has if it's an integer ,if it's a string or something else.Now we knew that we went ahead and we were asking for username and password out of a different table called users because in this lab we knew that it actually existed in a real life application you would have to do some guesswork in order to find out if that table exists or not.Then we got the information out of the database and this is the way how we can extract interesting data from a sql database.
 
+**Lab #6: SQL injection UNION attack, retrieving multiple values in a single column**
 
+We will be using a union-based sql injection attack in order to retrieve multiple values in a single column .This lab contain sql injection vulnerability in the product category filter.The results from the query are returned in the applications responseso we can use a union attack to retrieve data from other tables.The database contains a different table called users with columns called username and password .To solve the lab perform a sql injection union attack that retrieves all the usernames and passwords and use the informationto login as the administrator  user.
 
-
+Goal:Retrieve all usernames and password and login as the administrator  user.
 
 
