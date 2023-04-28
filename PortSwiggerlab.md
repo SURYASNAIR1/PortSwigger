@@ -321,4 +321,46 @@ So we discovered a sql live vulnerability.We were using information schema table
 
 **Lab #10: SQL injection attack, listing the database contents on Oracle**
 
+We will be using a union-based sql injection attack to list the database content on oracle databases .This lab contains a sql injection vulnerability in the product category filter the result the query are returned in the aplication's response.So we can use a union attack to retrieve data from other tables the application has a login function and the database contains a table the usernames and passwords we need to determine the name of this table and the columns it contains then retrieve the contents of the table to obtain the username and password of all users and to solve the lab login as the administrator user.
 
+Goal : 
+i.Determine which table contains the usernames and passwords.
+ii.Determine the column name in the table.
+iii.Output the content of the table.
+iv.Login as the administrator user.
+
+![image](https://user-images.githubusercontent.com/123303806/235209446-6c4e7990-4bf6-4aac-9efa-da4a1e1ab4a0.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235210267-8a1427bf-9e4e-433c-a6e1-783f2999f84c.png)
+
+Determine the number of columns:
+
+![image](https://user-images.githubusercontent.com/123303806/235211009-03c353c5-3727-4d8a-9ad7-3edfaef05d65.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235211134-e02599db-6c26-456b-a26e-f97cb48985a6.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235211386-72bfc063-5c5a-433b-8884-1f742c6f721d.png)
+
+So 2 columns.
+
+Find data type of columns:
+
+![image](https://user-images.githubusercontent.com/123303806/235212304-09f091e6-8e8d-44bb-8bb4-516ebb659875.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235212580-99f02300-b0c3-4ba7-9d5e-e322b3ff7324.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235212791-c4ee9b2e-3888-4609-8334-e6d446a4211b.png)
+
+Output the list of tables in the database:
+
+![image](https://user-images.githubusercontent.com/123303806/235213465-80a65270-35ee-42e6-8680-21790a49470c.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235214268-415d0815-43c1-4f42-a045-74e6a5fe81ab.png)
+
+Output the column names of the users table :
+
+![image](https://user-images.githubusercontent.com/123303806/235215014-65497589-5d0b-4515-ad5f-2803ac3dfa6a.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235215110-3a1a0c7e-ab43-4cb5-aacf-bf91678293d0.png)
+
+Output the list of usernames/passwords
