@@ -224,3 +224,13 @@ This will show the username and password.But I dont know where the username ends
 ![image](https://user-images.githubusercontent.com/123303806/235081794-f608952e-55e6-4ac8-8709-c325d5f95869.png)
 
 Enter the username upto the star and enter the password after the star.Then we tried to login its showing successful.
+
+**Lab #7: SQL injection attack, querying the database type and version on Oracle**
+
+We are going to use sql injection attack to query the type and version of the database that's running.
+
+![image](https://user-images.githubusercontent.com/123303806/235084080-49ead8f3-8b6d-40e8-b5f0-4cb1dc021738.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235084141-7dd47881-6325-4ffb-be6d-9f430d31bb18.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235085523-c3030d06-1006-41ec-bc5c-fee2b808b25f.png)
