@@ -305,6 +305,7 @@ We do see all the tables there's a myriad of tables.
 
 Now we can specify which table .where the table name equals the table name .
 
-![image](https://user-images.githubusercontent.com/123303806/235176314-28f3f774-f99b-428f-8ff4-dc3b9c3ecf33.png)
+![image](https://user-images.githubusercontent.com/123303806/235178358-4373713a-32e5-495c-873d-6057cdec802d.png)
+
 
 
