@@ -234,3 +234,47 @@ We are going to use sql injection attack to query the type and version of the da
 ![image](https://user-images.githubusercontent.com/123303806/235084141-7dd47881-6325-4ffb-be6d-9f430d31bb18.png)
 
 ![image](https://user-images.githubusercontent.com/123303806/235085523-c3030d06-1006-41ec-bc5c-fee2b808b25f.png)
+
+**Lab #8: SQL injection attack, querying the database type and version on MySQL and Microsoft**
+
+We will be using a union based sql injection attack to query the database type and version on mysql and microsoft databases.This lab contains sql injection  vulnerability in the product category filter.We can use union attack to retrieve the results from an injected query to solve the lab display the databse version string.
+
+Goal : Display the database version.
+
+So when I insert a sql character it will results in internal server error thus confirms this is vulnerable to sql injection.
+
+![image](https://user-images.githubusercontent.com/123303806/235159053-b2ad7d85-1eea-4127-94b9-c68f7135f6d2.png)
+
+i.Find the number of columns
+
+![image](https://user-images.githubusercontent.com/123303806/235160044-d50e4524-3874-40d2-860a-860645bf3731.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235165596-7c7ab380-29ad-4a19-9309-4e448b0f0e91.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235166119-64f71486-f1bf-4594-91ce-098c78e0e577.png)
+
+Results in internal server error.
+
+![image](https://user-images.githubusercontent.com/123303806/235166800-0870912f-a95a-4959-ad3e-14bde08114c1.png)
+
+Thus the internal server error was because of dash dash.
+
+![image](https://user-images.githubusercontent.com/123303806/235167320-0b09969f-88eb-437e-9485-e4d37b0d1255.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235167533-766417d5-6e44-4d1e-946f-9bf63eccb01b.png)
+
+The number of columns that the vulnerable query is using is 3 minus 1 which is equal to two.
+
+ii.Figure out which columns contain text.
+
+![image](https://user-images.githubusercontent.com/123303806/235168807-f20de354-bb03-4173-a021-ce8d922ab03c.png)
+
+iii.Output the version
+
+![image](https://user-images.githubusercontent.com/123303806/235169410-4cf580e9-718e-4017-866f-6759fb02b484.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235169645-2f981e6e-3b2b-4fe9-a3b7-91d5a98ed06f.png)
+
+Thus it shows the version.
+
+![image](https://user-images.githubusercontent.com/123303806/235169896-954720be-55cb-4add-a2e6-fc160b866f28.png)
