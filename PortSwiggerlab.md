@@ -318,3 +318,7 @@ Now we can specify which table .where the table name equals the table name .
 ![image](https://user-images.githubusercontent.com/123303806/235205159-c752b9ab-8e60-4385-889f-b9336d64dde1.png)
 
 So we discovered a sql live vulnerability.We were using information schema tables which exists at all time .We can always use that to look at all the existing tables .We found an interesting one with our users table and now we did the exact same querying asking for the columnsin that table and we got our username and our password column name and now that we had the correct table name and correct column nameswe could just query with the unionselect queryfor the values we wantedand those werethe credentials of the administrator and we use this credential as we logged in and we solved the challenge.
+
+**Lab #10: SQL injection attack, listing the database contents on Oracle**
+
+
