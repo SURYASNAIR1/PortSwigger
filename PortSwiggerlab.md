@@ -384,3 +384,20 @@ The results of the sql query are not returned,and no error messages are displaye
 The database contains a different table called users,withcolumns acalled usernames and password.We need to exploit the blind sql injection vulnerability to find out the password of the administrator user.
 
 To solve the lab,log in as administrator user.
+
+Goals :
+
+i.Enumerate the password of the administrator
+ii.Log in as the administrator user.
+
+![image](https://user-images.githubusercontent.com/123303806/235285399-732b60af-6a02-476a-be63-81189872fb4c.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235285553-1017137d-176c-404f-875a-67dc3c649c8e.png)
+
+First thing to do when testing for blind based sql injectionis to force a true use case and see how the application responds and then force a false use case and see how the application responds.If the application responds differently depending on the true use case versus the false use case then we can successfully exploit that blind based sql injection in order to infer content from the database.
+
+Analysis :
+
+i.Confirm that the parameter is vulnerable to sql injection
+
+Select the tracking id from the tracking table where tracking id = tracking id shown n burpsuite.
