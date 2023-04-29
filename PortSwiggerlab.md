@@ -401,3 +401,68 @@ Analysis :
 i.Confirm that the parameter is vulnerable to sql injection
 
 Select the tracking id from the tracking table where tracking id = tracking id shown n burpsuite.
+
+![image](https://user-images.githubusercontent.com/123303806/235288299-6a5a8915-5b7c-47ce-9a80-dca81e466188.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235288386-660d5449-c032-462a-b075-e8dbce9c6fb2.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235288509-e0a8dfa5-8dbe-4856-a3df-b2ef599a5ed0.png)
+
+Here we get a welcome back message.
+
+![image](https://user-images.githubusercontent.com/123303806/235288545-e9d5d353-6171-490d-91d9-3ee99f685a31.png)
+
+
+Here we don't get a welcome back message.
+
+So we proved that the aplication responds differently .
+
+ii.Confirm that we have a users table .
+
+![image](https://user-images.githubusercontent.com/123303806/235288840-9ec27cc6-cadc-40b6-81a5-baa406de9312.png)
+
+Thus the users table existsin the database.
+
+iii.Confirm the username administrator exists in the users table.
+
+![image](https://user-images.githubusercontent.com/123303806/235289035-09f1f409-1d07-4f0d-a265-d917b6317736.png)
+
+This means that the administrator user exists.
+
+![image](https://user-images.githubusercontent.com/123303806/235289123-f1f3968f-12c0-4f0a-bed5-d41bd726ea2d.png)
+
+In this no welcomeback message is shown.
+
+iv.Enumerate the password of the administrator user.
+
+![image](https://user-images.githubusercontent.com/123303806/235289439-010878cc-14d8-4c0a-a364-e37dbb647058.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235289466-25b378d4-a643-42fe-ac22-767d3ecb334d.png)
+
+So we can use a binary search method in order to figure out the paswordlength.
+
+![image](https://user-images.githubusercontent.com/123303806/235289534-3e5cd4ec-a005-4d0a-b731-6fce868ab491.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235289581-cefb8bc4-9a8c-4c38-be50-fde146e6d42f.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235289620-38c369d9-6530-4bdc-bc1b-01ead8243f88.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235289694-8b0794a0-0ec6-4f8d-8d15-faa8e7784441.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235289885-46abb21e-ca29-4abd-9451-e05c69765799.png)
+
+Here we didn't get a welcomeback message so the first character of password is not 'a'.
+
+![image](https://user-images.githubusercontent.com/123303806/235289966-ec2d6aa2-bf27-43a1-a1e4-9babd54f33cc.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235290022-900c51b6-b941-4a3d-9c98-4e5cc763b4b4.png)
+
+So we have enumerated that the first character is 12 .Now we're going to do that for second character.Instead of repeating this task we are using a different type of attack called cluster bomb.
+
+![image](https://user-images.githubusercontent.com/123303806/235290183-f8bc4793-f010-4aa7-ac4f-9b878900632e.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235290245-9a82ddf2-4a2b-4e99-9d67-cda8d1daa259.png)
+
+![image](https://user-images.githubusercontent.com/123303806/235291052-6b73aca9-ff57-4ad4-874b-366b1c329bd2.png)
+
+
