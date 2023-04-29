@@ -372,3 +372,9 @@ Output the list of usernames/passwords
 ![image](https://user-images.githubusercontent.com/123303806/235216383-aef6cb28-38bd-4283-a1cb-5bd856a4478d.png)
 
 ![image](https://user-images.githubusercontent.com/123303806/235216913-6100889c-b829-4016-91fa-f5d34998cd0c.png)
+
+**Lab #11: Blind SQL injection with conditional responses**
+
+We will be exploiting a blind based sql injection using conditional responses to list the content of the database.
+
+This lab contains a blind sql injection vulnerability.The application uses a tracking cookie for analytics,and performs an sql query containing the value of the submitted cookie.
