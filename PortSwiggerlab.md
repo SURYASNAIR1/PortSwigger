@@ -378,3 +378,9 @@ Output the list of usernames/passwords
 We will be exploiting a blind based sql injection using conditional responses to list the content of the database.
 
 This lab contains a blind sql injection vulnerability.The application uses a tracking cookie for analytics,and performs an sql query containing the value of the submitted cookie.
+
+The results of the sql query are not returned,and no error messages are displayed.But the application includes a 'Welcome back' message in the page if the query returns any rows.
+
+The database contains a different table called users,withcolumns acalled usernames and password.We need to exploit the blind sql injection vulnerability to find out the password of the administrator user.
+
+To solve the lab,log in as administrator user.
