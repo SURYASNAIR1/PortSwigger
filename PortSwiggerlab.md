@@ -550,6 +550,25 @@ password = tlxrz9r14m0uproqd9xv
 
 ![image](https://user-images.githubusercontent.com/123303806/236660830-4adcd85d-4bb0-4a9b-ab6b-303a345e08a4.png)
 
+**Lab #13: Blind SQL injection with time delays**
+
+This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
+
+The results of the SQL query are not returned, and the application does not respond any differently based on whether the query returns any rows or causes an error. However, since the query is executed synchronously, it is possible to trigger conditional time delays to infer information.
+
+Vulnerability parameter- tracking cookie
+
+End Goal : To prove that the field is vulnerable to blind sqli(time based)
+
+![image](https://user-images.githubusercontent.com/123303806/236667742-ed431014-7d4e-408c-8d0b-0b2004cf4246.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236667819-e95543f9-2903-4f02-bae1-47175a23f9ca.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236667890-2286ef82-0ddc-44ba-a9bb-0ac33dd34524.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236667944-a8ae4efe-9ad4-4e85-8d83-419003e2f5c1.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236667981-f996c772-a86d-4ad4-aeda-f6c2f016bc84.png)
 
 
 
