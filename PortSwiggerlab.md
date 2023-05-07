@@ -570,6 +570,59 @@ End Goal : To prove that the field is vulnerable to blind sqli(time based)
 
 ![image](https://user-images.githubusercontent.com/123303806/236667981-f996c772-a86d-4ad4-aeda-f6c2f016bc84.png)
 
+**Lab #14: Blind SQL injection with time delays and information retrieval**
+
+This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
+
+The results of the SQL query are not returned, and the application does not respond any differently based on whether the query returns any rows or causes an error. However, since the query is executed synchronously, it is possible to trigger conditional time delays to infer information.
+
+The database contains a different table called users, with columns called username and password. You need to exploit the blind SQL injection vulnerability to find out the password of the administrator user.
+
+Vulnerable parameter - tracking cookie.
+
+End Goal : 
+
+i.Exploit the time-based blind SQLi to output the administrator password.
+ii.Login as the asdministrator user.
+
+Analysis :
+
+i.Confirm that the parameter is vulnerable to SQLi.
+
+![image](https://user-images.githubusercontent.com/123303806/236668730-7f41514d-c28e-4c02-9d12-0a9866458356.png)
+
+ii.Confirm that the users table exists on the database
+
+![image](https://user-images.githubusercontent.com/123303806/236668894-54c19dfd-e27c-4f17-8c8b-a5ab484ff279.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236669098-164a7b6f-17ab-4c43-a3ff-1e0e1ec1a90b.png)
+
+iii.Enumerate password length
+
+![image](https://user-images.githubusercontent.com/123303806/236669240-d9393854-09f1-4170-8e96-1ba6b6afdf07.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236669282-02c49744-b075-49fe-96c8-300d14dc6ff7.png)
+
+Thus password length is bigger than 1 but lesser than 25.
+
+![image](https://user-images.githubusercontent.com/123303806/236669988-dcee2783-9fc5-4d86-a2a0-a77c4143f5ad.png)
+
+Length of password is 20 characters.
+
+iv.Enumerate the administrator password.
+
+![image](https://user-images.githubusercontent.com/123303806/236670164-1bb587e5-680e-4d3b-a671-2d724d7cb6f3.png)
+
+So a is not the first character of the password.
+
+![image](https://user-images.githubusercontent.com/123303806/236670428-d91a8732-3556-4e4f-99aa-f3db0d063468.png)
+
+
+
+
+
+
+
 
 
 
