@@ -465,4 +465,92 @@ So we have enumerated that the first character is 12 .Now we're going to do that
 
 ![image](https://user-images.githubusercontent.com/123303806/235291052-6b73aca9-ff57-4ad4-874b-366b1c329bd2.png)
 
+**Lab #12: Blind SQL injection with conditional errors**
+
+This lab contains a blind sql injection vulnerability the application uses a tracking cookie for analytics and performs a sql query containing the value of the submitted cookie.
+
+The results of the SQL query are not returned, and the application does not respond any differently based on whether the query returns any rows. If the SQL query causes an error, then the application returns a custom error message.
+
+The database contains a different table called users, with columns called username and password. You need to exploit the blind SQL injection vulnerability to find out the password of the administrator user.
+
+End Goals : 
+
+i.Output the administrator password.
+ii.Login as the administrator user.
+
+Analysis : 
+i.prove that parameter is vulnerable
+
+![image](https://user-images.githubusercontent.com/123303806/236657511-6e79cb84-465e-4c6f-8586-36efed866b9e.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236657530-5cc25d1f-118a-4da2-9779-3443e08e802c.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236657558-af95ab4c-114b-4cd8-b3fb-5a1b321baaae.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236657592-d2cb1ab2-c91b-4974-bf53-dc259cdf4b72.png)
+
+This shows that we are dealing with oracle database and this is very vulnerable to sql injection.To confirm vulnerability we give the name of a table that doesn't exist.
+
+![image](https://user-images.githubusercontent.com/123303806/236657631-afecbb47-9c63-475f-a531-90c5d0da28f9.png)
+
+ii.Confirm that the users table exist in the database.
+
+![image](https://user-images.githubusercontent.com/123303806/236657710-61a5335a-cf8a-4427-bf9b-72c016fd9023.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236657759-40473ca5-fcda-48f1-a99e-069d4d1f4ca3.png)
+
+The above figure results in 200 ok which means the users table exist.
+
+iii.Confirm that the administrator user exists in the user database.
+
+![image](https://user-images.githubusercontent.com/123303806/236657883-6ee7be54-697a-491e-8ddc-b2fa9f5f1fc8.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236657986-3ca0af68-334a-4152-b06a-ab4de6935542.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236658019-18376afa-2877-4642-b8fe-d878432036b7.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236658097-646636b4-fe3e-4606-b523-24dc3e864f0a.png)
+
+Thus the administrator user exist.
+
+![image](https://user-images.githubusercontent.com/123303806/236658164-47112e9c-d088-491a-82a9-621ac942838b.png)
+
+This means that the user doesnot exist in database.
+
+iv.Determine length of password.
+
+![image](https://user-images.githubusercontent.com/123303806/236658252-27de6302-651f-4446-b267-38cbc2cdc819.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236658277-1a0ce561-df0d-4d31-bbe4-655f4df97632.png)
+
+Which means length of password is less than 50.
+
+![image](https://user-images.githubusercontent.com/123303806/236658445-15dbee12-4c50-4e7b-b48d-1e1363cb439d.png)
+
+V.Output the administrator password
+
+![image](https://user-images.githubusercontent.com/123303806/236658585-138d6f3e-9d09-4633-bf6c-0168a763c5be.png)
+
+This means a is not the first character of the password.
+
+![image](https://user-images.githubusercontent.com/123303806/236658646-63e54c16-406b-45b4-90c7-a5681380afd4.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236658675-8cec88ef-e2be-4f56-b0d7-454534fef43d.png)
+
+Which means the first characater is t.
+
+![image](https://user-images.githubusercontent.com/123303806/236658853-a0821405-92d8-4c07-929f-8b255f5c1296.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236660340-77a86c0d-74bb-46f6-bbfc-87f82080f0a1.png)
+
+![image](https://user-images.githubusercontent.com/123303806/236660357-c303e8b8-edb2-443d-91c4-708028bae7c4.png)
+
+Username = administrator 
+password = tlxrz9r14m0uproqd9xv
+
+![image](https://user-images.githubusercontent.com/123303806/236660830-4adcd85d-4bb0-4a9b-ab6b-303a345e08a4.png)
+
+
+
+
 
