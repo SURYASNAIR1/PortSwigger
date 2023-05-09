@@ -91,3 +91,43 @@ Observe that the response contains the contents of the /etc/passwd file.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/99a9d2ab-e5c7-47bc-839d-07d3564f72fe)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b7676b6c-f1b9-453e-9d3c-7c75ea93bb03)
+
+**Lab #6: File path traversal, validation of start of path**
+
+This lab contains a file path traversal vulnerability in the display of product images.
+
+The application transmits the full file path via a request parameter, and validates that the supplied path starts with the expected folder.
+
+To solve the lab, retrieve the contents of the /etc/passwd file.
+
+Use Burp Suite to intercept and modify a request that fetches a product image.
+Modify the filename parameter, giving it the value:
+
+/var/www/images/../../../etc/passwd
+Observe that the response contains the contents of the /etc/passwd file.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/68242533-ed91-4a7a-9a25-9ca986347950)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6c0bd2a3-4614-4fee-aa7f-dbcd0620a1b5)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e2c903fe-0cd8-4592-8c9e-b9a60ce8fe22)
+
+**Lab 7: File path traversal, validation of file extension with null byte bypass**4
+
+This lab contains a file path traversal vulnerability in the display of product images.
+
+The application validates that the supplied filename ends with the expected file extension.
+
+To solve the lab, retrieve the contents of the /etc/passwd file.
+
+Use Burp Suite to intercept and modify a request that fetches a product image.
+Modify the filename parameter, giving it the value:
+
+../../../etc/passwd%00.png
+Observe that the response contains the contents of the /etc/passwd file.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1a8ffffe-3b35-4a14-a823-51af916285d8)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/db7802e6-db72-4de6-a77d-229bdd51ca22)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/385f71bb-a571-4afc-8126-7b3c3cabe97f)
