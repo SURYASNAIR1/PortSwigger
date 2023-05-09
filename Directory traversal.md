@@ -16,6 +16,8 @@ Observe that the response contains the contents of the /etc/passwd file.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/82dcf6a3-23fd-42c6-84be-01f396921186)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/adfe9a3e-4e4c-49c0-a8bf-770304d0eeac)
+
 **Lab #2: File path traversal, traversal sequences blocked with absolute path bypass**
 
 This lab contains a file path traversal vulnerability in the display of product images.
