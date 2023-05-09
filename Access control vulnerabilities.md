@@ -42,3 +42,19 @@ In Burp Proxy, turn interception on and enable response interception.
 Complete and submit the login page, and forward the resulting request in Burp.
 Observe that the response sets the cookie Admin=false. Change it to Admin=true.
 Load the admin panel and delete carlos.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3ca2a357-6f9a-4f8a-8627-e0719deb6cd7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1cb4cad5-bb35-4e1a-a2ba-4efc8173cfbd)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/90e05622-6d0e-4ce2-a183-bde679c495d2)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4634a67b-faf2-43d9-aa06-72652dfae2fb)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/af0e339a-0c68-4619-8979-337d26345d2f)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c2ffdacb-d88a-4d48-bd94-ce983cac4788)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f0a2d462-e56f-406b-9183-2b800e932da8)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b6f45abf-4be8-4e4d-a681-dff2656ae8f8)
