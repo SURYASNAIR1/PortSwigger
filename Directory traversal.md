@@ -112,7 +112,7 @@ Observe that the response contains the contents of the /etc/passwd file.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e2c903fe-0cd8-4592-8c9e-b9a60ce8fe22)
 
-**Lab 7: File path traversal, validation of file extension with null byte bypass**4
+**Lab #7: File path traversal, validation of file extension with null byte bypass**4
 
 This lab contains a file path traversal vulnerability in the display of product images.
 
