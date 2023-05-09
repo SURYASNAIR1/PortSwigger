@@ -69,3 +69,25 @@ Observe that the response contains the contents of the /etc/passwd file.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/929b157b-32b5-4884-aa9f-3a4c974b6b18)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5dd61519-8d1a-4c82-a0a3-fa9139909c97)
+
+**Lab #5: File path traversal, traversal sequences stripped with superfluous URL-decode**
+
+This lab contains a file path traversal vulnerability in the display of product images.
+
+The application blocks input containing path traversal sequences. It then performs a URL-decode of the input before using it.
+
+To solve the lab, retrieve the contents of the /etc/passwd file.
+
+Use Burp Suite to intercept and modify a request that fetches a product image.
+Modify the filename parameter, giving it the value:
+
+..%252f..%252f..%252fetc/passwd
+Observe that the response contains the contents of the /etc/passwd file.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ea556f31-e1f3-476d-83ce-8fad77ce08e3)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/17daf106-ca80-47fc-bdcd-61fa8b2d9183)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/99a9d2ab-e5c7-47bc-839d-07d3564f72fe)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b7676b6c-f1b9-453e-9d3c-7c75ea93bb03)
