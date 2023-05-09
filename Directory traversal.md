@@ -50,3 +50,22 @@ Modify the filename parameter, giving it the value:
 ....//....//....//etc/passwd
 Observe that the response contains the contents of the /etc/passwd file.
 
+**Lab #4: File path traversal, traversal sequences stripped non-recursively**
+
+This lab contains a file path traversal vulnerability in the display of product images.
+
+The application strips path traversal sequences from the user-supplied filename before using it.
+
+To solve the lab, retrieve the contents of the /etc/passwd file.
+
+Use Burp Suite to intercept and modify a request that fetches a product image.
+Modify the filename parameter, giving it the value:
+
+....//....//....//etc/passwd
+Observe that the response contains the contents of the /etc/passwd file.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/bb8f65ad-cfd8-45ff-941e-2f6bd9d42167)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/929b157b-32b5-4884-aa9f-3a4c974b6b18)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5dd61519-8d1a-4c82-a0a3-fa9139909c97)
