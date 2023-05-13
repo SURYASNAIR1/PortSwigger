@@ -125,3 +125,29 @@ userId=d30bd329-041a-4065-82e6-21b543647070
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0b6e6fb2-2f36-472d-aeda-e5d7709b6b52)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/da6415cb-2f04-443c-9f5f-e5ecd9f54c8b)
+
+**Lab #7: User ID controlled by request parameter with data leakage in redirect**
+
+This lab contains an access control vulnerability where sensitive information is leaked in the body of a redirect response.
+
+To solve the lab, obtain the API key for the user carlos and submit it as the solution.
+
+You can log in to your own account using the following credentials: wiener:peter
+
+Log in using the supplied credentials and access your account page.
+Send the request to Burp Repeater.
+Change the "id" parameter to carlos.
+Observe that although the response is now redirecting you to the home page, it has a body containing the API key belonging to carlos.
+Submit the API key.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d47e5b8d-a694-4e26-ba93-3a0c319f077b)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d87a277c-24b0-4b49-be71-38fd537e6baa)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d128cd2b-a7c1-47c6-9870-2a06564cd0ba)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/74dc541b-f550-4bbc-8dc2-4c705d277d59)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c01320e4-49d4-4fa2-b3c3-64cc9dad7092)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3dc826f6-5efd-4746-a4b4-cf472418b277)
