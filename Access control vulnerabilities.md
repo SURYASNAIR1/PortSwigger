@@ -118,6 +118,10 @@ Log in using the supplied credentials and access your account page.
 Change the "id" parameter to the saved user ID.
 Retrieve and submit the API key.
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a8f9d3d3-7f5d-4b6b-83c9-d62b442a5f53)
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/18bcf60b-3824-441b-a1c9-6c535e84ebd8)
 
-userId=5768deac-a177-4552-bde6-36e0fb88f648
+userId=d30bd329-041a-4065-82e6-21b543647070
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0b6e6fb2-2f36-472d-aeda-e5d7709b6b52)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/da6415cb-2f04-443c-9f5f-e5ecd9f54c8b)
