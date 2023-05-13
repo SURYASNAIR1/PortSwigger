@@ -83,3 +83,23 @@ Browse to /admin and delete carlos.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3fe3d501-58b4-4621-9d18-05906b91b9fc)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/85c11cca-a7f7-4906-9134-95b7130227ab)
+
+**Lab #5: User ID controlled by request parameter**
+
+This lab has a horizontal privilege escalation vulnerability on the user account page.
+
+To solve the lab, obtain the API key for the user carlos and submit it as the solution.
+
+You can log in to your own account using the following credentials: wiener:peter.
+
+Log in using the supplied credentials and go to your account page.
+Note that the URL contains your username in the "id" parameter.
+Send the request to Burp Repeater.
+Change the "id" parameter to carlos.
+Retrieve and submit the API key for carlos.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1c390a42-2233-4bbd-92c1-ae038643ce7d)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/53174ea8-8892-4971-88fc-47e4eda78cb9)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/994f407d-483e-4374-8db2-e4d5eaec56b0)
