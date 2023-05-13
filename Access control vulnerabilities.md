@@ -58,3 +58,28 @@ Load the admin panel and delete carlos.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f0a2d462-e56f-406b-9183-2b800e932da8)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b6f45abf-4be8-4e4d-a681-dff2656ae8f8)
+
+**Lab #4: User role can be modified in user profile**
+
+This lab has an admin panel at /admin. It's only accessible to logged-in users with a roleid of 2.
+
+Solve the lab by accessing the admin panel and using it to delete the user carlos.
+
+You can log in to your own account using the following credentials: wiener:peter.
+
+Log in using the supplied credentials and access your account page.
+Use the provided feature to update the email address associated with your account.
+Observe that the response contains your role ID.
+Send the email submission request to Burp Repeater, add "roleid":2 into the JSON in the request body, and resend it.
+Observe that the response shows your roleid has changed to 2.
+Browse to /admin and delete carlos.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2fe8c073-df2b-4d0c-aa30-d66e01e1eb58)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/aa677078-d68d-43ca-afb8-424bcb0ada1f)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ccd7cf25-6111-4357-8d25-e889cad1c2f6)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3fe3d501-58b4-4621-9d18-05906b91b9fc)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/85c11cca-a7f7-4906-9134-95b7130227ab)
