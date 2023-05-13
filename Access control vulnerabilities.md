@@ -103,3 +103,21 @@ Retrieve and submit the API key for carlos.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/53174ea8-8892-4971-88fc-47e4eda78cb9)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/994f407d-483e-4374-8db2-e4d5eaec56b0)
+
+**Lab #6: User ID controlled by request parameter, with unpredictable user IDs**
+
+This lab has a horizontal privilege escalation vulnerability on the user account page, but identifies users with GUIDs.
+
+To solve the lab, find the GUID for carlos, then submit his API key as the solution.
+
+You can log in to your own account using the following credentials: wiener:peter
+
+Find a blog post by carlos.
+Click on carlos and observe that the URL contains his user ID. Make a note of this ID.
+Log in using the supplied credentials and access your account page.
+Change the "id" parameter to the saved user ID.
+Retrieve and submit the API key.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a8f9d3d3-7f5d-4b6b-83c9-d62b442a5f53)
+
+userId=5768deac-a177-4552-bde6-36e0fb88f648
