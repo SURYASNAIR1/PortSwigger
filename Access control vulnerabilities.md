@@ -165,4 +165,7 @@ Change the "id" parameter in the URL to administrator.
 View the response in Burp and observe that it contains the administrator's password.
 Log in to the administrator account and delete carlos.
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/36478a5d-ca3e-4fd7-8a96-92b7d8ba8eb3)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e866d424-c9d7-4ad7-8ccf-4849b34ad9b7)
 
