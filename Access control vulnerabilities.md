@@ -169,3 +169,21 @@ Log in to the administrator account and delete carlos.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e866d424-c9d7-4ad7-8ccf-4849b34ad9b7)
 
+**Lab #9: Insecure direct object references**
+
+This lab stores user chat logs directly on the server's file system, and retrieves them using static URLs.
+
+Solve the lab by finding the password for the user carlos, and logging into their account.
+
+Select the Live chat tab.
+Send a message and then select View transcript.
+Review the URL and observe that the transcripts are text files assigned a filename containing an incrementing number.
+Change the filename to 1.txt and review the text. Notice a password within the chat transcript.
+Return to the main lab page and log in using the stolen credentials.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8bdc1cc3-ab60-49a5-ad4b-a2b4f502c806)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e24a0700-6791-45c3-b73e-12027c7fd920)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f8eb6be6-1247-4a7a-a052-337c00e5a089)
+
