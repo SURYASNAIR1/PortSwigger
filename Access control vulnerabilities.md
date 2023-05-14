@@ -205,3 +205,22 @@ To delete the user carlos, add ?username=carlos to the real query string, and ch
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f65205be-0a47-4fa7-a889-c9f1b278a562)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d6e1e35b-4fe7-4669-8d66-f8870b4728f3)
+
+**Lab #11: Method-based access control can be circumvented**
+
+This lab implements access controls based partly on the HTTP method of requests. You can familiarize yourself with the admin panel by logging in using the credentials administrator:admin.
+
+To solve the lab, log in using the credentials wiener:peter and exploit the flawed access controls to promote yourself to become an administrator.
+
+Log in using the admin credentials.
+Browse to the admin panel, promote carlos, and send the HTTP request to Burp Repeater.
+Open a private/incognito browser window, and log in with the non-admin credentials.
+Attempt to re-promote carlos with the non-admin user by copying that user's session cookie into the existing Burp Repeater request, and observe that the response says "Unauthorized".
+Change the method from POST to POSTX and observe that the response changes to "missing parameter".
+Convert the request to use the GET method by right-clicking and selecting "Change request method".
+Change the username parameter to your username and resend the request.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7c6a4bc2-25dd-49b4-a6b7-65554250d6d2)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e1fa9bc6-8b13-4661-8893-30a1fc400712)
+
