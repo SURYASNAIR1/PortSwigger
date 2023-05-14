@@ -187,3 +187,21 @@ Return to the main lab page and log in using the stolen credentials.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f8eb6be6-1247-4a7a-a052-337c00e5a089)
 
+**Lab #10: URL-based access control can be circumvented**
+
+This website has an unauthenticated admin panel at /admin, but a front-end system has been configured to block external access to that path. However, the back-end application is built on a framework that supports the X-Original-URL header.
+
+To solve the lab, access the admin panel and delete the user carlos.
+
+Try to load /admin and observe that you get blocked. Notice that the response is very plain, suggesting it may originate from a front-end system.
+Send the request to Burp Repeater. Change the URL in the request line to / and add the HTTP header X-Original-URL: /invalid. Observe that the application returns a "not found" response. This indicates that the back-end system is processing the URL from the X-Original-URL header.
+Change the value of the X-Original-URL header to /admin. Observe that you can now access the admin page.
+To delete the user carlos, add ?username=carlos to the real query string, and change the X-Original-URL path to /admin/delete.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/fd0e85e9-9e6d-4290-a06b-4cb41db0be64)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/06ccc8bf-89a4-4364-b081-64b58c6581d7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f65205be-0a47-4fa7-a889-c9f1b278a562)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d6e1e35b-4fe7-4669-8d66-f8870b4728f3)
