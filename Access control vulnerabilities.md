@@ -187,6 +187,10 @@ Return to the main lab page and log in using the stolen credentials.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f8eb6be6-1247-4a7a-a052-337c00e5a089)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dc185d6d-d043-48a8-8a42-b74c9fe8b27a)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/118e567b-f6c6-4ec1-b80d-f3941ce4be48)
+
 **Lab #10: URL-based access control can be circumvented**
 
 This website has an unauthenticated admin panel at /admin, but a front-end system has been configured to block external access to that path. However, the back-end application is built on a framework that supports the X-Original-URL header.
