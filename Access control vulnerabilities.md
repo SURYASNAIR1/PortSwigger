@@ -224,6 +224,14 @@ Change the username parameter to your username and resend the request.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e1fa9bc6-8b13-4661-8893-30a1fc400712)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3765d3d3-f76d-4d1a-9163-57804851b9b0)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/303555a2-a117-447b-86bd-4ad8c00fb4b6)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8e6e0e76-9224-47cc-a896-cdd80bd5c0e1)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8c6223d3-a682-4d6c-b49b-572786165ad9)
+
 **Lab #12: Multi-step process with no access control on one step**
 
 This lab has an admin panel with a flawed multi-step process for changing a user's role. You can familiarize yourself with the admin panel by logging in using the credentials administrator:admin.
