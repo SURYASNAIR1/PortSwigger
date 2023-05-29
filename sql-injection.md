@@ -465,6 +465,12 @@ So we have enumerated that the first character is 12 .Now we're going to do that
 
 ![image](https://user-images.githubusercontent.com/123303806/235291052-6b73aca9-ff57-4ad4-874b-366b1c329bd2.png)
 
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/43369c3d-87cb-42e1-b427-18b94bdcd5ca)
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a907a3f7-0cc2-4c99-a07d-76a5f1eb15c2)
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/245c82a0-2b28-4bd8-a541-1c65d6c5a897)
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a5c64021-98ba-44a5-ae5d-9348afee19a4)
+
 **Lab #12: Blind SQL injection with conditional errors**
 
 This lab contains a blind sql injection vulnerability the application uses a tracking cookie for analytics and performs a sql query containing the value of the submitted cookie.
@@ -621,9 +627,26 @@ So a is not the first character of the password.
 
 ![image](https://user-images.githubusercontent.com/123303806/236683522-1dbc9b99-74f7-401d-bb64-5b7f7ecb5164.png)
 
+**Lab #15: Blind SQL injection with time delays and information retrieval**
 
+This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
 
+The results of the SQL query are not returned, and the application does not respond any differently based on whether the query returns any rows or causes an error. However, since the query is executed synchronously, it is possible to trigger conditional time delays to infer information.
 
+The database contains a different table called users, with columns called username and password. You need to exploit the blind SQL injection vulnerability to find out the password of the administrator user.
+
+To solve the lab, log in as the administrator user.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dcf7040b-3942-4d38-8514-723aaeb9d2e7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/995dbd16-10a2-481d-b404-50af5d46ddf4)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/69ad3c39-7306-488d-b365-5b88a05e400a)
+
+![Uploading image.png…]()
+
+username : administrator 
+password : uq0k0oca9y9s2l2off6e
 
 
 
