@@ -26,6 +26,8 @@ Go back to the blog.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b03ea046-1c12-449c-a835-b598f2359f6a)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8d4792cd-b40e-40e2-bcbf-db082baeb8b9)
+
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7273dcab-b258-4895-b73a-7d3fad1d42d0)
 
 **Lab: Reflected XSS into attribute with angle brackets HTML-encoded**
