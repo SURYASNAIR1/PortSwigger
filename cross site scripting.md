@@ -45,6 +45,19 @@ Verify the technique worked by right-clicking, selecting "Copy URL", and pasting
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1b8d24cd-6fa7-4745-8510-d36b79c3a1bb)
 
+**Lab: DOM XSS in document.write sink using source location.search**
+
+This lab contains a DOM-based cross-site scripting vulnerability in the search query tracking functionality. It uses the JavaScript document.write function, which writes data out to the page. The document.write function is called with data from location.search, which you can control using the website URL.
+
+To solve this lab, perform a cross-site scripting attack that calls the alert function.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/91f52dbd-b55c-47dc-a6ec-b9e6cd08ad65)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/fa4d0925-a114-4f17-8934-3ecb70c1a879)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0c87f355-95c6-4a0f-bcdc-86e9d2f90419)
+
+
 **Lab: Reflected XSS into a JavaScript string with angle brackets HTML encoded**
 
 This lab contains a reflected cross-site scripting vulnerability in the search query tracking functionality where angle brackets are encoded. The reflection occurs inside a JavaScript string. To solve this lab, perform a cross-site scripting attack that breaks out of the JavaScript string and calls the alert function.
