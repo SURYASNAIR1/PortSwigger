@@ -390,86 +390,61 @@ Goals :
 i.Enumerate the password of the administrator
 ii.Log in as the administrator user.
 
-![image](https://user-images.githubusercontent.com/123303806/235285399-732b60af-6a02-476a-be63-81189872fb4c.png)
+![WhatsApp Image 2023-05-30 at 09 48 21](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/44be77eb-6631-4b28-8d48-c832b463ede5)
 
-![image](https://user-images.githubusercontent.com/123303806/235285553-1017137d-176c-404f-875a-67dc3c649c8e.png)
+![WhatsApp Image 2023-05-30 at 09 48 50](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/afa79205-9495-4495-89de-211a8ba0bc03)
 
-First thing to do when testing for blind based sql injectionis to force a true use case and see how the application responds and then force a false use case and see how the application responds.If the application responds differently depending on the true use case versus the false use case then we can successfully exploit that blind based sql injection in order to infer content from the database.
+![WhatsApp Image 2023-05-30 at 09 49 25](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0e568529-8150-45af-be21-513f82743b5a)
 
-Analysis :
+![WhatsApp Image 2023-05-30 at 09 50 45](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/57d02b4a-c274-4712-95fc-fb03ac73d1b2)
 
-i.Confirm that the parameter is vulnerable to sql injection
+![WhatsApp Image 2023-05-30 at 09 52 44](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a6457748-adb9-495e-b0af-9bd15b05f094)
 
-Select the tracking id from the tracking table where tracking id = tracking id shown n burpsuite.
+![WhatsApp Image 2023-05-30 at 09 54 01](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5a7ba1da-743e-4170-9c6b-72ce302a417b)
 
-![image](https://user-images.githubusercontent.com/123303806/235288299-6a5a8915-5b7c-47ce-9a80-dca81e466188.png)
+![WhatsApp Image 2023-05-30 at 09 57 54](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a3947aa5-fb7d-4698-8007-861c047c8f38)
 
-![image](https://user-images.githubusercontent.com/123303806/235288386-660d5449-c032-462a-b075-e8dbce9c6fb2.png)
+![WhatsApp Image 2023-05-30 at 10 02 44](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ee379352-5511-442b-b0c9-74b81daefc37)
 
-![image](https://user-images.githubusercontent.com/123303806/235288509-e0a8dfa5-8dbe-4856-a3df-b2ef599a5ed0.png)
+![WhatsApp Image 2023-05-30 at 10 04 50](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/32820bf8-c055-4744-88c9-3427982d05a1)
 
-Here we get a welcome back message.
+![WhatsApp Image 2023-05-30 at 10 05 38](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/39fe7bd4-2eb7-41c8-9db5-21b0f3835c58)
 
-![image](https://user-images.githubusercontent.com/123303806/235288545-e9d5d353-6171-490d-91d9-3ee99f685a31.png)
+![WhatsApp Image 2023-05-30 at 10 06 40](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b92b16bc-8e51-4a5a-9ad0-507ab7a876fc)
 
+![WhatsApp Image 2023-05-30 at 10 07 17](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/064ae1f5-496e-4791-aec0-7cd32b43d2ea)
 
-Here we don't get a welcome back message.
+![WhatsApp Image 2023-05-30 at 10 08 02](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c410093f-dddc-4408-bb52-4c4b0e275903)
 
-So we proved that the aplication responds differently .
+![WhatsApp Image 2023-05-30 at 10 08 49](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/97e13ce9-9508-4456-bf4a-76376031fa0f)
 
-ii.Confirm that we have a users table .
+![WhatsApp Image 2023-05-30 at 10 09 16](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/04bbdeeb-2e48-4283-a6f9-b9159bdeb6c8)
 
-![image](https://user-images.githubusercontent.com/123303806/235288840-9ec27cc6-cadc-40b6-81a5-baa406de9312.png)
+![WhatsApp Image 2023-05-30 at 10 09 58](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/07017940-5f92-4db2-abab-ca5a657b95b8)
 
-Thus the users table existsin the database.
+![WhatsApp Image 2023-05-30 at 10 10 32](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/839b32a4-a8f5-4395-8a7a-e9d922e6b258)
 
-iii.Confirm the username administrator exists in the users table.
+![WhatsApp Image 2023-05-30 at 10 11 35](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b7118d14-452e-4f8a-8d84-a27420e90560)
 
-![image](https://user-images.githubusercontent.com/123303806/235289035-09f1f409-1d07-4f0d-a265-d917b6317736.png)
+![WhatsApp Image 2023-05-30 at 10 12 13](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4e8d6ed8-c27f-44dd-9cf0-4c616efcd357)
 
-This means that the administrator user exists.
+![WhatsApp Image 2023-05-30 at 10 12 38](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e3443f82-ff94-43b5-89eb-4fc6b21fbde5)
 
-![image](https://user-images.githubusercontent.com/123303806/235289123-f1f3968f-12c0-4f0a-bed5-d41bd726ea2d.png)
+![WhatsApp Image 2023-05-30 at 10 13 16](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3a63300b-400f-40ab-9780-fa2c4adc3b98)
 
-In this no welcomeback message is shown.
+![WhatsApp Image 2023-05-30 at 10 13 52](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9d0646ca-2514-47d1-8b9b-4ac4947b2b92)
 
-iv.Enumerate the password of the administrator user.
+![WhatsApp Image 2023-05-30 at 10 14 17](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/411dd159-5c94-4b47-8ebe-38ee32dd46b0)
 
-![image](https://user-images.githubusercontent.com/123303806/235289439-010878cc-14d8-4c0a-a364-e37dbb647058.png)
+![WhatsApp Image 2023-05-30 at 10 14 43](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7548375b-d3b2-4492-93dd-d27c24ca9e51)
 
-![image](https://user-images.githubusercontent.com/123303806/235289466-25b378d4-a643-42fe-ac22-767d3ecb334d.png)
+![WhatsApp Image 2023-05-30 at 10 15 11](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dbb92027-8f8e-4268-8257-a1a1e8db3d71)
 
-So we can use a binary search method in order to figure out the paswordlength.
+![WhatsApp Image 2023-05-30 at 10 15 40](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/70e4e8f5-f907-454d-a7e3-8b2e892713fd)
 
-![image](https://user-images.githubusercontent.com/123303806/235289534-3e5cd4ec-a005-4d0a-b731-6fce868ab491.png)
+![WhatsApp Image 2023-05-30 at 10 16 13](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3109734a-94c6-4626-afd1-19cc0aa3ddd9)
 
-![image](https://user-images.githubusercontent.com/123303806/235289581-cefb8bc4-9a8c-4c38-be50-fde146e6d42f.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235289620-38c369d9-6530-4bdc-bc1b-01ead8243f88.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235289694-8b0794a0-0ec6-4f8d-8d15-faa8e7784441.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235289885-46abb21e-ca29-4abd-9451-e05c69765799.png)
-
-Here we didn't get a welcomeback message so the first character of password is not 'a'.
-
-![image](https://user-images.githubusercontent.com/123303806/235289966-ec2d6aa2-bf27-43a1-a1e4-9babd54f33cc.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235290022-900c51b6-b941-4a3d-9c98-4e5cc763b4b4.png)
-
-So we have enumerated that the first character is 12 .Now we're going to do that for second character.Instead of repeating this task we are using a different type of attack called cluster bomb.
-
-![image](https://user-images.githubusercontent.com/123303806/235290183-f8bc4793-f010-4aa7-ac4f-9b878900632e.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235290245-9a82ddf2-4a2b-4e99-9d67-cda8d1daa259.png)
-
-![image](https://user-images.githubusercontent.com/123303806/235291052-6b73aca9-ff57-4ad4-874b-366b1c329bd2.png)
-
-
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/43369c3d-87cb-42e1-b427-18b94bdcd5ca)
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a907a3f7-0cc2-4c99-a07d-76a5f1eb15c2)
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/245c82a0-2b28-4bd8-a541-1c65d6c5a897)
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a5c64021-98ba-44a5-ae5d-9348afee19a4)
+![WhatsApp Image 2023-05-30 at 10 20 08](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b58b3fbf-c8d1-4f7e-ad50-cadec1fd3b40)
 
 **Lab #12: Blind SQL injection with conditional errors**
 
