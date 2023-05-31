@@ -72,3 +72,13 @@ Verify the technique worked by right clicking, selecting "Copy URL", and pasting
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9a59536c-fc11-4ca3-b60a-1b9c217afd63)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/82b6fee4-a559-4f78-a064-416fa02d65c0)
+
+**Lab : DOM XSS in document.write sink using source location.search inside a select element**
+
+This lab contains a DOM-based cross-site scripting vulnerability in the stock checker functionality. It uses the JavaScript document.write function, which writes data out to the page. The document.write function is called with data from location.search which you can control using the website URL. The data is enclosed within a select element.
+
+To solve this lab, perform a cross-site scripting attack that breaks out of the select element and calls the alert function.
+
+![WhatsApp Image 2023-05-31 at 12 08 57](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4d8fa456-ca33-4d3b-8d83-f4b11fb005c7)
+
+![WhatsApp Image 2023-05-31 at 12 09 26](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d09e90b3-baea-4c49-8fb5-4014a6ff5105)
