@@ -19,7 +19,7 @@ If we select  clothing,shoes and accessories from the category , we will get the
 
 ![image](https://user-images.githubusercontent.com/123303806/234769430-2fdb0cad-5969-4ea3-9426-f95f29452a4d.png)
 
-Category with the value set to accessories.
+Category with the value set to accessories.     
 
 ![image](https://user-images.githubusercontent.com/123303806/234769567-d1345066-3568-4585-b3b7-2964b8d30712.png)
 
