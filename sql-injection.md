@@ -541,15 +541,17 @@ Vulnerability parameter- tracking cookie
 
 End Goal : To prove that the field is vulnerable to blind sqli(time based)
 
-![image](https://user-images.githubusercontent.com/123303806/236667742-ed431014-7d4e-408c-8d0b-0b2004cf4246.png)
+![WhatsApp Image 2023-05-31 at 09 50 30](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d13b28a6-3075-4dc2-995d-2370a777308e)
 
-![image](https://user-images.githubusercontent.com/123303806/236667819-e95543f9-2903-4f02-bae1-47175a23f9ca.png)
+![WhatsApp Image 2023-05-31 at 09 54 48](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7b39e6ba-70e8-4214-9e7a-10eec9c35ac7)
 
-![image](https://user-images.githubusercontent.com/123303806/236667890-2286ef82-0ddc-44ba-a9bb-0ac33dd34524.png)
+![WhatsApp Image 2023-05-31 at 09 55 40](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b6199876-c0d6-455d-9d47-2eaebaa42cc1)
 
-![image](https://user-images.githubusercontent.com/123303806/236667944-a8ae4efe-9ad4-4e85-8d83-419003e2f5c1.png)
+![WhatsApp Image 2023-05-31 at 10 03 28](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/662072ac-4685-46e9-92dd-e9f0c9ce2c48)
 
-![image](https://user-images.githubusercontent.com/123303806/236667981-f996c772-a86d-4ad4-aeda-f6c2f016bc84.png)
+![WhatsApp Image 2023-05-31 at 10 04 46](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/eee91b00-a3b4-4f6c-a173-eeba60976120)
+
+![WhatsApp Image 2023-05-31 at 10 06 03](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/84d6128b-e1bb-4fc5-ac16-11360cbbed0b)
 
 **Lab #14: Blind SQL injection with time delays and information retrieval**
 
