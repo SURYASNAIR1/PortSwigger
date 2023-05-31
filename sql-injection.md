@@ -625,13 +625,23 @@ To solve the lab, log in as the administrator user.
 username : administrator 
 password : uq0k0oca9y9s2l2off6e
 
-**Lab #16: Blind SQL injection with out-of-band interaction**
+**Lab : Visible error-based SQL injection**
 
-This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
+This lab contains a SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie. The results of the SQL query are not returned.
 
-The SQL query is executed asynchronously and has no effect on the application's response. However, you can trigger out-of-band interactions with an external domain.
+The database contains a different table called users, with columns called username and password. To solve the lab, find a way to leak the password for the administrator user, then log in to their account.
 
-To solve the lab, exploit the SQL injection vulnerability to cause a DNS lookup to Burp Collaborator.
+![WhatsApp Image 2023-05-31 at 09 50 30](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/178ae1c6-90fa-45d7-9a2c-62c92ad3e886)
+
+![WhatsApp Image 2023-05-31 at 09 54 48](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a10eb73a-81b0-484f-abd9-6191b46290eb)
+
+![WhatsApp Image 2023-05-31 at 09 55 40](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/738aa79f-1df3-46cb-831a-a00f04da396a)
+
+![WhatsApp Image 2023-05-31 at 10 03 28](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0045211d-9256-4351-8340-8c5c29840ad1)
+
+![WhatsApp Image 2023-05-31 at 10 04 46](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9dcfe34d-631d-45b5-93c4-6a504773b7d8)
+
+![WhatsApp Image 2023-05-31 at 10 06 03](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/98347ac2-d48d-45f1-b913-e3f06bc03cbf)
 
 
 
