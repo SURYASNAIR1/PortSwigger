@@ -1,4 +1,12 @@
+**Lab #1: Basic SSRF against the local server**
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9879f816-f5c9-4206-b862-c2779b59dae0)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a81f2f3d-b307-4a79-8edb-dc3d0c6d2534)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1b2e37fa-5369-4304-8137-2dcbe05e5fb7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0c1423c0-b89b-46b6-ac0a-5af08421afd2)
 
 
 **Lab #2: Basic SSRF against another back-end system**
@@ -14,3 +22,15 @@
 ![WhatsApp Image 2023-06-06 at 11 36 51](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/fd34af5d-88eb-400d-8b7f-e28c6a0869f6)
 
 ![WhatsApp Image 2023-06-06 at 11 35 20](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/88f4d0cc-4485-48e1-84e7-2a49afb90422)
+
+**Lab: SSRF with blacklist-based input filter**
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/247aabf5-4673-48c6-a2b3-7e2844a348f0)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c737a26c-c676-439c-9cd9-7644fd95f417)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2856236f-df87-4fb7-adc8-40a3ea5e57ba)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ff6f2aa7-95a2-490e-918f-128d9348c344)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dc49ece3-51a8-4838-a9d8-bff3a434dacf)
