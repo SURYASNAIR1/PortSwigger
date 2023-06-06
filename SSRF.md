@@ -36,3 +36,13 @@
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dc49ece3-51a8-4838-a9d8-bff3a434dacf)
 
 **Lab: SSRF with whitelist-based input filter**
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ee902922-b998-4720-a41d-d93a12b019bf)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4d73d62e-71c1-4e50-bdad-6f9805a09679)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1cf52189-23ce-4b14-89ec-3d667c54c2f3)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/fbb75006-6678-4b0e-9c98-08d07b1c0263)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ea54b593-5753-4492-b0aa-cef983fe8577)
