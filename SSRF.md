@@ -23,7 +23,7 @@
 
 ![WhatsApp Image 2023-06-06 at 11 35 20](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/88f4d0cc-4485-48e1-84e7-2a49afb90422)
 
-**Lab: SSRF with blacklist-based input filter**
+**Lab #3: SSRF with blacklist-based input filter**
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/247aabf5-4673-48c6-a2b3-7e2844a348f0)
 
@@ -34,3 +34,5 @@
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ff6f2aa7-95a2-490e-918f-128d9348c344)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dc49ece3-51a8-4838-a9d8-bff3a434dacf)
+
+**Lab: SSRF with whitelist-based input filter**
