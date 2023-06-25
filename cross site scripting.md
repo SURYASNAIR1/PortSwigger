@@ -44,6 +44,8 @@ To solve this lab, make the "back" link alert document.cookie.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ac499873-917a-4ecf-9150-73ecd4a53502)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/bc4354a6-12e4-4950-af1c-d905b796b406)
+
 **Lab #7: Reflected XSS into attribute with angle brackets HTML-encoded**
 
 This lab contains a reflected cross-site scripting vulnerability in the search blog functionality where angle brackets are HTML-encoded. To solve this lab, perform a cross-site scripting attack that injects an attribute and calls the alert function.
