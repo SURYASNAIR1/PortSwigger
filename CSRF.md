@@ -22,10 +22,14 @@ To verify that the exploit works, try it on yourself by clicking "View exploit" 
 Change the email address in your exploit so that it doesn't match your own.
 Click "Deliver to victim" to solve the lab.
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0d5e0cfc-bca9-4179-8d97-06918ea58457)
+![WhatsApp Image 2023-06-25 at 10 00 24](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f458f094-603b-4bad-99c3-b66ca08078c4)
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/baf6c953-a169-4df6-affe-7de336c09028)
+![WhatsApp Image 2023-06-25 at 10 01 00](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/516ecc48-b74b-42ce-b89c-f0581cbb2ac6)
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f8e3a349-b18c-418b-9a35-6cd83f7bcbad)
+![WhatsApp Image 2023-06-25 at 10 02 42](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/38cacc78-db38-439c-ba15-7415238194de)
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d9ad1e5d-e473-4d7e-a5ec-d89d5bdf90ed)
+![WhatsApp Image 2023-06-25 at 10 09 06](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/276708de-b458-4d6c-b6f2-5780f68ec6e2)
+
+![WhatsApp Image 2023-06-25 at 10 09 45](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/fc8f1e9a-cedb-4a2e-8511-f474e71f00fc)
+
+![WhatsApp Image 2023-06-25 at 10 21 08](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/45127378-943c-4740-ab4a-5beaa8e71df5)
