@@ -58,4 +58,8 @@ The url parameter contains an open redirection vulnerability that allows you to 
 
 https://YOUR-LAB-ID.web-security-academy.net/post?postId=4&url=https://YOUR-EXPLOIT-SERVER-ID.exploit-server.net/
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4ff98aa2-f368-4a2e-a6ed-f3a2ac2e55a9)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4ef23f46-25dc-485c-be30-a28a1312e62d)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b0be0f94-fd6e-43ee-8eff-f0c856063db7)
