@@ -660,6 +660,7 @@ The solution described here is sufficient simply to trigger a DNS lookup and so 
 
 ![WhatsApp Image 2023-06-26 at 18 48 59](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0066a881-9870-41f4-84e3-d0fe8cd4863e)
 
+**Lab: Blind SQL injection with out-of-band data exfiltration**
 ![WhatsApp Image 2023-06-26 at 18 52 27](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/86f2f223-7217-41c7-b644-8a8cbb3ed6d0)
 
 ![WhatsApp Image 2023-06-26 at 18 52 56](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/49eb5881-da0e-44b6-8eae-e641aef7bae4)
