@@ -731,3 +731,16 @@ Use the administrator's credentials to log in and solve the lab.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b803a13f-ba76-46f6-afee-d005b3f81ae1)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/01647c9a-0335-44e3-b9ca-2049abd0d2b1)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2ecb26ba-fd3b-46ac-84a9-96990c1c87c1)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/594b79ff-2d4d-490e-b053-be67cf925be7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f8712af5-67ba-4528-8bf5-107aa9ba6848)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d3fb5e7f-daa2-4322-8e5c-e0d70ac2a088)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/089ed683-4a79-4229-83e6-7fe162275886)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7170d24b-7831-47d3-a362-167fd0c466a6)
+
