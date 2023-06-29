@@ -42,9 +42,9 @@ Hit enter and click "back".anchor element, and changes its href attribute using 
 
 To solve this lab, make the "back" link alert document.cookie.
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ac499873-917a-4ecf-9150-73ecd4a53502)
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a8630541-a2b6-47ad-8c51-b9ec74b041bf)
 
-![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/bc4354a6-12e4-4950-af1c-d905b796b406)
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0c0e3841-f00e-46d0-9d08-c0ea6f6bb334)
 
 **Lab #7: Reflected XSS into attribute with angle brackets HTML-encoded**
 
