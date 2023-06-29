@@ -46,6 +46,24 @@ To solve this lab, make the "back" link alert document.cookie.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0c0e3841-f00e-46d0-9d08-c0ea6f6bb334)
 
+**Lab #6: DOM XSS in jQuery selector sink using a hashchange event**
+
+This lab contains a DOM-based cross-site scripting vulnerability on the home page. It uses jQuery's $() selector function to auto-scroll to a given post, whose title is passed via the location.hash property.
+
+To solve the lab, deliver an exploit to the victim that calls the print() function in their browsers.
+
+Notice the vulnerable code on the home page using Burp or the browser's DevTools.
+From the lab banner, open the exploit server.
+In the Body section, add the following malicious iframe:
+
+<iframe src="https://YOUR-LAB-ID.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
+Store the exploit, then click View exploit to confirm that the print() function is called.
+Go back to the exploit server and click Deliver to victim to solve the lab.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/64dd9017-1489-4af8-916b-f4d60571ea60)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/207fb1e4-793f-42fe-8067-b6e4ea562abb)
+
 **Lab #7: Reflected XSS into attribute with angle brackets HTML-encoded**
 
 This lab contains a reflected cross-site scripting vulnerability in the search blog functionality where angle brackets are HTML-encoded. To solve this lab, perform a cross-site scripting attack that injects an attribute and calls the alert function.
