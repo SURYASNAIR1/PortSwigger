@@ -79,6 +79,20 @@ Verify the technique worked by right-clicking, selecting "Copy URL", and pasting
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1b8d24cd-6fa7-4745-8510-d36b79c3a1bb)
 
+**Lab #8: Stored XSS into anchor href attribute with double quotes HTML-encoded**
+
+This lab contains a stored cross-site scripting vulnerability in the comment functionality. To solve this lab, submit a comment that calls the alert function when the comment author name is clicked.
+
+Post a comment with a random alphanumeric string in the "Website" input, then use Burp Suite to intercept the request and send it to Burp Repeater.
+Make a second request in the browser to view the post and use Burp Suite to intercept the request and send it to Burp Repeater.
+Observe that the random string in the second Repeater tab has been reflected inside an anchor href attribute.
+Repeat the process again but this time replace your input with the following payload to inject a JavaScript URL that calls alert:
+
+javascript:alert(1)
+Verify the technique worked by right-clicking, selecting "Copy URL", and pasting the URL in the browser. Clicking the name above your comment should trigger an alert.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c779a839-4229-4d35-a5ef-616c78d7b672)
+
 **Lab #10: DOM XSS in document.write sink using source location.search**
 
 This lab contains a DOM-based cross-site scripting vulnerability in the search query tracking functionality. It uses the JavaScript document.write function, which writes data out to the page. The document.write function is called with data from location.search, which you can control using the website URL.
