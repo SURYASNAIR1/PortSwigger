@@ -355,3 +355,32 @@ Verify the technique worked by right clicking, selecting "Copy URL", and pasting
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e47431da-d208-4612-8e6c-1772963fa66a)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7011b4ec-c295-466d-b695-d1ee40fba95b)
+
+**Lab: Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped**
+
+This lab contains a reflected cross-site scripting vulnerability in the search query tracking functionality where angle brackets and double are HTML encoded and single quotes are escaped.
+
+To solve this lab, perform a cross-site scripting attack that breaks out of the JavaScript string and calls the alert function.
+
+Submit a random alphanumeric string in the search box, then use Burp Suite to intercept the search request and send it to Burp Repeater.
+Observe that the random string has been reflected inside a JavaScript string.
+Try sending the payload test'payload and observe that your single quote gets backslash-escaped, preventing you from breaking out of the string.
+Try sending the payload test\payload and observe that your backslash doesn't get escaped.
+Replace your input with the following payload to break out of the JavaScript string and inject an alert:
+
+\'-alert(1)//
+Verify the technique worked by right clicking, selecting "Copy URL", and pasting the URL in the browser. When you load the page it should trigger an alert.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6efba89d-61a5-4607-81f2-83950eb20323)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e8807670-d62b-4b62-94ec-87d48b7d1c32)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3572ddac-c99d-4158-81cf-49dfaf1bde92)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2bdc5c57-69e6-4ef5-b5c0-c73b012abb8b)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7817a575-a50e-4dd8-a3c2-dd744e6efb54)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b207e89f-2e86-420d-9ca6-ed997710b149)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/cb4e93e8-de7c-4c80-a665-93ae7e4e96bb)
