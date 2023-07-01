@@ -24,6 +24,8 @@ Enter a name, email and website.
 Click "Post comment".
 Go back to the blog.
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e7b3259e-d254-4ed5-a29a-8ae7fe89fe85)
+
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b03ea046-1c12-449c-a835-b598f2359f6a)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8d4792cd-b40e-40e2-bcbf-db082baeb8b9)
