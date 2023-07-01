@@ -303,3 +303,29 @@ https://YOUR-LAB-ID.web-security-academy.net/?search=%22%3E%3Csvg%3E%3Canimatetr
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7b48c25c-f970-4b62-a54e-2a7b73f8f69d)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c1920d35-106f-46a1-95b5-2374e09cbb5c)
+
+**Lab: Reflected XSS in canonical link tag**
+
+This lab reflects user input in a canonical link tag and escapes angle brackets.
+
+To solve the lab, perform a cross-site scripting attack on the home page that injects an attribute that calls the alert function.
+
+To assist with your exploit, you can assume that the simulated user will press the following key combinations:
+
+ALT+SHIFT+X
+CTRL+ALT+X
+Alt+X
+
+Visit the following URL, replacing YOUR-LAB-ID with your lab ID:
+
+https://YOUR-LAB-ID.web-security-academy.net/?%27accesskey=%27x%27onclick=%27alert(1)
+This sets the X key as an access key for the whole page. When a user presses the access key, the alert function is called.
+
+To trigger the exploit on yourself, press one of the following key combinations:
+On Windows: ALT+SHIFT+X
+On MacOS: CTRL+ALT+X
+On Linux: Alt+X
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9bf75ec3-130e-4ccb-936c-ee37de63ccf8)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6a689200-decd-4f30-b5fe-796ee5140b38)
