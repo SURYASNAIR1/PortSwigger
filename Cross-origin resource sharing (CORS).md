@@ -130,4 +130,4 @@ Click Access log, retrieve and submit the victim's API key to complete the lab.
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/69dec431-ac66-4c95-aa5d-96e016fb50b5)
 
-**
+
