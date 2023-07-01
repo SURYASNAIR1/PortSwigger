@@ -109,6 +109,26 @@ To solve this lab, perform a cross-site scripting attack that calls the alert fu
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0c87f355-95c6-4a0f-bcdc-86e9d2f90419)
 
+**Lab #11: DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded**
+
+This lab contains a DOM-based cross-site scripting vulnerability in a AngularJS expression within the search functionality.
+
+AngularJS is a popular JavaScript library, which scans the contents of HTML nodes containing the ng-app attribute (also known as an AngularJS directive). When a directive is added to the HTML code, you can execute JavaScript expressions within double curly braces. This technique is useful when angle brackets are being encoded.
+
+To solve this lab, perform a cross-site scripting attack that executes an AngularJS expression and calls the alert function.
+
+Enter a random alphanumeric string into the search box.
+View the page source and observe that your random string is enclosed in an ng-app directive.
+Enter the following AngularJS expression in the search box:
+
+{{$on.constructor('alert(1)')()}}
+Click search.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/31c33455-d9c3-4674-b3b8-3955a426ce42)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9a36be84-4e7c-4d3e-91d1-3c5848439044)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/15e5c945-c6dc-4cfc-99dc-2a1c3673c714)
 
 **Lab #12: Reflected XSS into a JavaScript string with angle brackets HTML encoded**
 
@@ -134,3 +154,25 @@ To solve this lab, perform a cross-site scripting attack that breaks out of the 
 ![WhatsApp Image 2023-05-31 at 12 08 57](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4d8fa456-ca33-4d3b-8d83-f4b11fb005c7)
 
 ![WhatsApp Image 2023-05-31 at 12 09 26](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d09e90b3-baea-4c49-8fb5-4014a6ff5105)
+
+**Lab: Reflected DOM XSS**
+
+This lab demonstrates a reflected DOM vulnerability. Reflected DOM vulnerabilities occur when the server-side application processes data from a request and echoes the data in the response. A script on the page then processes the reflected data in an unsafe way, ultimately writing it to a dangerous sink.
+
+To solve this lab, create an injection that calls the alert() function.
+
+In Burp Suite, go to the Proxy tool and make sure that the Intercept feature is switched on.
+Back in the lab, go to the target website and use the search bar to search for a random test string, such as "XSS".
+Return to the Proxy tool in Burp Suite and forward the request.
+On the Intercept tab, notice that the string is reflected in a JSON response called search-results.
+From the Site Map, open the searchResults.js file and notice that the JSON response is used with an eval() function call.
+By experimenting with different search strings, you can identify that the JSON response is escaping quotation marks. However, backslash is not being escaped.
+To solve this lab, enter the following search term:
+
+\"-alert(1)}//
+As you have injected a backslash and the site isn't escaping them, when the JSON response attempts to escape the opening double-quotes character, it adds a second backslash. The resulting double-backslash causes the escaping to be effectively canceled out. This means that the double-quotes are processed unescaped, which closes the string that should contain the search term.
+
+An arithmetic operator (in this case the subtraction operator) is then used to separate the expressions before the alert() function is called. Finally, a closing curly bracket and two forward slashes close the JSON object early and comment out what would have been the rest of the object. As a result, the response is generated as follows:
+
+{"searchTerm":"\\"-alert(1)}//", "results":[]}
+
