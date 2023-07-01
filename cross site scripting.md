@@ -329,3 +329,29 @@ On Linux: Alt+X
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9bf75ec3-130e-4ccb-936c-ee37de63ccf8)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6a689200-decd-4f30-b5fe-796ee5140b38)
+
+**Lab: Reflected XSS into a JavaScript string with single quote and backslash escaped**
+
+This lab contains a reflected cross-site scripting vulnerability in the search query tracking functionality. The reflection occurs inside a JavaScript string with single quotes and backslashes escaped.
+
+To solve this lab, perform a cross-site scripting attack that breaks out of the JavaScript string and calls the alert function.
+
+Submit a random alphanumeric string in the search box, then use Burp Suite to intercept the search request and send it to Burp Repeater.
+Observe that the random string has been reflected inside a JavaScript string.
+Try sending the payload test'payload and observe that your single quote gets backslash-escaped, preventing you from breaking out of the string.
+Replace your input with the following payload to break out of the script block and inject a new script:
+
+</script><script>alert(1)</script>
+Verify the technique worked by right clicking, selecting "Copy URL", and pasting the URL in the browser. When you load the page it should trigger an alert.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b9c52be0-b276-4b61-a4dd-ecc373ea7039)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/2eaccec2-f391-4f07-bd2a-2f740fc8c31c)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/67be6c85-cedb-4b9e-a8ba-0665f709b074)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/530ef4bc-e86a-4e26-94e7-e9c273a30db6)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e47431da-d208-4612-8e6c-1772963fa66a)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7011b4ec-c295-466d-b695-d1ee40fba95b)
