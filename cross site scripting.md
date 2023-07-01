@@ -258,3 +258,48 @@ This injection creates a custom tag with the ID x, which contains an onfocus eve
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/15bf7132-163a-4e07-b583-2c90631c8bf1)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/98cdeb01-b5c8-4622-97d8-9ce104a73041)
+
+**Lab: Reflected XSS with some SVG markup allowed**
+
+This lab has a simple reflected XSS vulnerability. The site is blocking common tags but misses some SVG tags and events.
+
+To solve the lab, perform a cross-site scripting attack that calls the alert() function.
+
+Inject a standard XSS payload, such as:
+
+<img src=1 onerror=alert(1)>
+Observe that this payload gets blocked. In the next few steps, we'll use Burp Intruder to test which tags and attributes are being blocked.
+Open Burp's browser and use the search function in the lab. Send the resulting request to Burp Intruder.
+In Burp Intruder, in the Positions tab, click "Clear §".
+In the request template, replace the value of the search term with: <>
+Place the cursor between the angle brackets and click "Add §" twice to create a payload position. The value of the search term should now be: <§§>
+Visit the XSS cheat sheet and click "Copy tags to clipboard".
+In Burp Intruder, in the Payloads tab, click "Paste" to paste the list of tags into the payloads list. Click "Start attack".
+When the attack is finished, review the results. Observe that all payloads caused an HTTP 400 response, except for the ones using the <svg>, <animatetransform>, <title>, and <image> tags, which received a 200 response.
+Go back to the Positions tab in Burp Intruder and replace your search term with:
+
+<svg><animatetransform%20=1>
+Place the cursor before the = character and click "Add §" twice to create a payload position. The value of the search term should now be:
+
+<svg><animatetransform%20§§=1>
+Visit the XSS cheat sheet and click "Copy events to clipboard".
+In Burp Intruder, in the Payloads tab, click "Clear" to remove the previous payloads. Then click "Paste" to paste the list of attributes into the payloads list. Click "Start attack".
+When the attack is finished, review the results. Note that all payloads caused an HTTP 400 response, except for the onbegin payload, which caused a 200 response.
+
+Visit the following URL in the browser to confirm that the alert() function is called and the lab is solved:
+
+https://YOUR-LAB-ID.web-security-academy.net/?search=%22%3E%3Csvg%3E%3Canimatetransform%20onbegin=alert(1)%3E
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7086dee5-a1fb-460d-8d1f-fdc38dafdf6b)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6adcf6a0-1234-4b6b-9069-b0b5ea57459b)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/cf2a9415-bd5e-4de7-b572-4592b8ac4758)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/80d3891b-3883-4ee1-96aa-242a4a31df56)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a9ff6b87-bc4d-40d8-b722-9d918286c0cb)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/7b48c25c-f970-4b62-a54e-2a7b73f8f69d)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c1920d35-106f-46a1-95b5-2374e09cbb5c)
