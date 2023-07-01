@@ -240,3 +240,21 @@ Click "Store" and "Deliver exploit to victim".
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ce9915e0-e93d-4468-a6dc-e696069722f0)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/76046dd2-ece3-4a77-acd5-f65e6a970d4e)
+
+**Lab: Reflected XSS into HTML context with all tags blocked except custom ones**
+
+This lab blocks all HTML tags except custom ones.
+
+To solve the lab, perform a cross-site scripting attack that injects a custom tag and automatically alerts document.cookie.
+
+Go to the exploit server and paste the following code, replacing YOUR-LAB-ID with your lab ID:
+
+<script>
+location = 'https://YOUR-LAB-ID.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
+</script>
+Click "Store" and "Deliver exploit to victim".
+This injection creates a custom tag with the ID x, which contains an onfocus event handler that triggers the alert function. The hash at the end of the URL focuses on this element as soon as the page is loaded, causing the alert payload to be called.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/15bf7132-163a-4e07-b583-2c90631c8bf1)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/98cdeb01-b5c8-4622-97d8-9ce104a73041)
