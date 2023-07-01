@@ -384,3 +384,25 @@ Verify the technique worked by right clicking, selecting "Copy URL", and pasting
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/b207e89f-2e86-420d-9ca6-ed997710b149)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/cb4e93e8-de7c-4c80-a665-93ae7e4e96bb)
+
+**Lab: Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped**
+
+This lab contains a stored cross-site scripting vulnerability in the comment functionality.
+
+To solve this lab, submit a comment that calls the alert function when the comment author name is clicked.
+
+Post a comment with a random alphanumeric string in the "Website" input, then use Burp Suite to intercept the request and send it to Burp Repeater.
+Make a second request in the browser to view the post and use Burp Suite to intercept the request and send it to Burp Repeater.
+Observe that the random string in the second Repeater tab has been reflected inside an onclick event handler attribute.
+Repeat the process again but this time modify your input to inject a JavaScript URL that calls alert, using the following payload:
+
+http://foo?&apos;-alert(1)-&apos;
+Verify the technique worked by right-clicking, selecting "Copy URL", and pasting the URL in the browser. Clicking the name above your comment should trigger an alert.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c86c30d6-49d7-4c71-90e9-332924e41b09)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5797fb25-64e5-4ab3-a8ab-e498bf6c1433)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e59fd7b8-fc04-45a1-913b-b12d75ca277c)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f3117f3a-9f70-46f9-9a78-60fb2f35f2e5)
