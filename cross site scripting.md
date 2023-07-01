@@ -93,6 +93,10 @@ Verify the technique worked by right-clicking, selecting "Copy URL", and pasting
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/c779a839-4229-4d35-a5ef-616c78d7b672)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1c56356c-9a63-4a8c-8dfe-2536a1c5b890)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5c6ef1b6-30db-4969-9879-c782bbf4b27c)
+
 **Lab #10: DOM XSS in document.write sink using source location.search**
 
 This lab contains a DOM-based cross-site scripting vulnerability in the search query tracking functionality. It uses the JavaScript document.write function, which writes data out to the page. The document.write function is called with data from location.search, which you can control using the website URL.
