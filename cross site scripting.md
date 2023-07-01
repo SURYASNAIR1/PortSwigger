@@ -176,3 +176,27 @@ An arithmetic operator (in this case the subtraction operator) is then used to s
 
 {"searchTerm":"\\"-alert(1)}//", "results":[]}
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9dd62a34-8187-40a1-b564-b33d0ef704c0)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5f422a3d-3433-4b7c-9cff-2e29d79a2619)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/dd90849b-23d7-4abe-add4-4b8d8e85fd11)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e70d66c8-8ed9-4632-9cc1-c38377c2b02d)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/99640265-48b1-4ec0-a1fb-14fd4b682bb4)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/70eaa7b5-3697-4753-b5e9-68e8ebcf4100)
+
+**Lab: Stored DOM XSS**
+
+This lab demonstrates a stored DOM vulnerability in the blog comment functionality. To solve this lab, exploit this vulnerability to call the alert() function.
+
+Post a comment containing the following vector:
+
+<><img src=1 onerror=alert(1)>
+In an attempt to prevent XSS, the website uses the JavaScript replace() function to encode angle brackets. However, when the first argument is a string, the function only replaces the first occurrence. We exploit this vulnerability by simply including an extra set of angle brackets at the beginning of the comment. These angle brackets will be encoded, but any subsequent angle brackets will be unaffected, enabling us to effectively bypass the filter and inject HTML.
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/e4334f81-4c0c-421b-bf94-d9c4a0be3f7c)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1db781f9-2700-47ad-8f51-b5248257eab9)
