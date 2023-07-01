@@ -447,3 +447,8 @@ Go back to the Collaborator tab, and click "Poll now". You should see an HTTP in
 Take a note of the value of the victim's cookie in the POST body.
 Reload the main blog page, using Burp Proxy or Burp Repeater to replace your own session cookie with the one you captured in Burp Collaborator. Send the request to solve the lab. To prove that you have successfully hijacked the admin user's session, you can use the same cookie in a request to /my-account to load the admin user's account page.
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/d105ca94-0fbe-4d6c-97a4-2d3dc17ed82b)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9b1a482a-d1b2-4e2c-88db-633b379b7ae8)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/58b59b07-53ee-4242-aef6-6ec90567c62f)
