@@ -174,3 +174,4 @@ Create a local SVG image with the following content:
 Post a comment on a blog post, and upload this image as an avatar.
 When you view your comment, you should see the contents of the /etc/hostname file in your image. Use the "Submit solution" button to submit the value of the server hostname.
 
+**
