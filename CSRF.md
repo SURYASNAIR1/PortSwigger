@@ -22,14 +22,6 @@ To verify that the exploit works, try it on yourself by clicking "View exploit" 
 Change the email address in your exploit so that it doesn't match your own.
 Click "Deliver to victim" to solve the lab.
 
-**Lab: CSRF where token validation depends on token being present**
-
-This lab's email change functionality is vulnerable to CSRF.
-
-To solve the lab, use your exploit server to host an HTML page that uses a CSRF attack to change the viewer's email address.
-
-You can log in to your own account using the following credentials: wiener:peter
-
 ![WhatsApp Image 2023-06-25 at 10 00 24](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f458f094-603b-4bad-99c3-b66ca08078c4)
 
 ![WhatsApp Image 2023-06-25 at 10 01 00](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/516ecc48-b74b-42ce-b89c-f0581cbb2ac6)
@@ -59,3 +51,23 @@ You can log in to your own account using the following credentials: wiener:peter
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3e91c758-0108-4b50-8e44-ff830198be09)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/974465f5-80a9-404a-a846-042e042da492)
+
+**Lab: CSRF where token validation depends on token being present**
+
+This lab's email change functionality is vulnerable to CSRF.
+
+To solve the lab, use your exploit server to host an HTML page that uses a CSRF attack to change the viewer's email address.
+
+You can log in to your own account using the following credentials: wiener:peter
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/4dc3ea4d-7e1f-4cb6-a066-132eb539c1ef)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/efc06d94-69c4-4636-98ca-811043b4aefb)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/0e0c5d4a-82a7-4a6d-9a96-20b566bbe1b6)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f95b883f-6c82-419f-ac58-4d624ac39cc7)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f9a083c7-ca09-419f-950a-ad564558a781)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3d75ad9b-19ff-4943-9288-11b2c10fa5a7)
