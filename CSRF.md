@@ -89,5 +89,6 @@ carlos:montoya
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/acc6e110-a39a-4d0a-80b4-c40f6cc9fc46)
 
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/a732fea6-d512-425a-abc0-d92f6e9f63aa)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1dd0ff1b-3f11-4d59-8632-164ec7af5c1b)
