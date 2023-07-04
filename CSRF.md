@@ -22,6 +22,14 @@ To verify that the exploit works, try it on yourself by clicking "View exploit" 
 Change the email address in your exploit so that it doesn't match your own.
 Click "Deliver to victim" to solve the lab.
 
+**Lab: CSRF where token validation depends on token being present**
+
+This lab's email change functionality is vulnerable to CSRF.
+
+To solve the lab, use your exploit server to host an HTML page that uses a CSRF attack to change the viewer's email address.
+
+You can log in to your own account using the following credentials: wiener:peter
+
 ![WhatsApp Image 2023-06-25 at 10 00 24](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f458f094-603b-4bad-99c3-b66ca08078c4)
 
 ![WhatsApp Image 2023-06-25 at 10 01 00](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/516ecc48-b74b-42ce-b89c-f0581cbb2ac6)
