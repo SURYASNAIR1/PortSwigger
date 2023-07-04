@@ -71,3 +71,23 @@ You can log in to your own account using the following credentials: wiener:peter
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/f9a083c7-ca09-419f-950a-ad564558a781)
 
 ![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/3d75ad9b-19ff-4943-9288-11b2c10fa5a7)
+
+**Lab: CSRF where token is not tied to user session**
+
+This lab's email change functionality is vulnerable to CSRF. It uses tokens to try to prevent CSRF attacks, but they aren't integrated into the site's session handling system.
+
+To solve the lab, use your exploit server to host an HTML page that uses a CSRF attack to change the viewer's email address.
+
+You have two accounts on the application that you can use to help design your attack. The credentials are as follows:
+
+wiener:peter
+carlos:montoya
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/6a522a69-d33c-4d51-92dd-02006f9c6520)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/09c780e4-6bd1-4021-bd6c-0330e16a1522)
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/acc6e110-a39a-4d0a-80b4-c40f6cc9fc46)
+
+
+![image](https://github.com/SURYASNAIR1/PortSwigger/assets/123303806/1dd0ff1b-3f11-4d59-8632-164ec7af5c1b)
